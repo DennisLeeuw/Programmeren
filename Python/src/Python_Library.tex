@@ -1,0 +1,69 @@
+\documentclass[a4paper,12pt,twoside,openright,titlepage]{book}
+
+%Additional packages
+\input{styles/packages}
+
+% Listing style
+\input{styles/lstset}
+
+% Uncomment for production
+% \syntaxonly
+
+% Style
+\pagestyle{headings}
+
+% Define document
+\author{D. Leeuw}
+\title{Extending Python (Libraries)}
+\date{\today\\v.0.6.0}
+
+\begin{document}
+\selectlanguage{dutch}
+
+\maketitle
+
+\copyright\ 2025 Dennis Leeuw\\
+
+\input{styles/licentie}
+
+%%%%%%%%%%%%%%%%%%%
+%%% Introductie %%%
+%%%%%%%%%%%%%%%%%%%
+
+\frontmatter
+\chapter{Over dit Document}
+\section{Leerdoelen}
+\input{src/leerdoelen-pip}
+
+%%%%%%%%%%%%%%%%%
+%%% De inhoud %%%
+%%%%%%%%%%%%%%%%%
+\tableofcontents
+
+\mainmatter
+
+\chapter{De herschreven code}
+\input{src/rewritten_code.tex}
+
+\chapter{Het maken van een library}
+\input{src/import-splitsing.tex}
+
+\chapter{Libraries van anderen}
+\input{src/libraries}
+\section{pip}
+\input{src/pip}
+
+\chapter{Vragen en opdrachten}
+\section{Vragen}
+\input{src/vragen-library}
+\section{Opdrachten}
+\input{src/opdrachten-functie_sysadmin}
+
+%%%%%%%%%%%%%%%%%%%%%
+%%% Index and End %%%
+%%%%%%%%%%%%%%%%%%%%%
+%\backmatter
+\printindex
+\end{document}
+
+%%% Last line %%%

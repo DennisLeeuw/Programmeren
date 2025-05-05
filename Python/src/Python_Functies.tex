@@ -1,0 +1,69 @@
+\documentclass[a4paper,12pt,twoside,openright,titlepage]{book}
+
+%Additional packages
+\input{styles/packages}
+
+% Listing style
+\input{styles/lstset}
+
+% Uncomment for production
+% \syntaxonly
+
+% Style
+\pagestyle{headings}
+
+% Define document
+\author{D. Leeuw}
+\title{Python}
+\date{\today\\v.1.1.0}
+
+\begin{document}
+\selectlanguage{dutch}
+
+\maketitle
+
+\copyright\ 2025 Dennis Leeuw\\
+
+\input{styles/licentie}
+
+%%%%%%%%%%%%%%%%%%%
+%%% Introductie %%%
+%%%%%%%%%%%%%%%%%%%
+
+\frontmatter
+\chapter{Over dit Document}
+%\input{src/OverDitDocument}
+%\input{src/DocChanges_Server}
+
+%%%%%%%%%%%%%%%%%
+%%% De inhoud %%%
+%%%%%%%%%%%%%%%%%
+\tableofcontents
+
+\mainmatter
+
+\chapter{Functies}
+\input{src/functie}
+\section{De functie definitie}
+\input{src/functie-definitie}
+\subsection{Functie parameters}
+\input{src/functie-definitie-parameters}
+\subsection{Functie return-waarden}
+\input{src/functie-definitie-return}
+\subsection{Variabelen en functies}
+\input{src/functie-variabelen}
+\section{Samenvatting}
+\input{src/functie-samenvatting}
+\section{Vragen}
+\input{src/vragen-functie}
+\section{Opdrachten}
+\input{src/opdrachten-functie}
+
+%%%%%%%%%%%%%%%%%%%%%
+%%% Index and End %%%
+%%%%%%%%%%%%%%%%%%%%%
+%\backmatter
+\printindex
+\end{document}
+
+%%% Last line %%%

@@ -1,0 +1,40 @@
+De parameters van een functie worden gebruikt als variabelen in een functie, maar een functie kan ook interne variabelen hebben die niet door de aanroep veranderd kunnen worden:
+\begin{lstlisting}[language=python]
+def add(a,b):
+    e = 1 # e is een interne variabele
+    c = a+b
+    return c
+
+d = add(5,4)
+print(f"d = {d}")
+print(f"e = {e}")
+# e bestaat hier niet
+\end{lstlisting}
+
+Zo kan ook het hoofdprogramma variabelen hebben. Deze zijn beschikbaar in de functie:
+\begin{lstlisting}[language=python]
+def add(a,b):
+    print(f"e = {e}") variabele uit het hoofdprogramma
+    c = a+b
+    return c
+
+e = 2 # Variabele in het hoofdprogramma`
+d = add(5,4)
+print(f"d = {d}")
+print(f"e = {e}")
+\end{lstlisting}
+Een goed advies: doe dit niet! Als je een waarde nodig hebt uit je hoofdprogramma geef deze dan als parameter mee. Vertrouw er niet op dat een variabele die je in je functie nodig hebt in je hoofdprogramma aanwezig is (en de juiste waarde heeft).
+
+Als je in je hoofdprogramma en in je functie variabelen met dezelfde naam gebruikt, dan hebben de variabelen in je functie de waarde die ze in de functie hebben en in je hoofdprogramma behouden ze de waarde die ze daar hebben:
+\begin{lstlisting}[language=python]
+def add(a,b):
+    print(f"a = {a}")
+    c = a+b
+    return c
+
+a = 2 # Variabele in het hoofdprogramma
+d = add(5,4)
+print(f"d = {d}")
+print(f"a = {a}")
+\end{lstlisting}
+

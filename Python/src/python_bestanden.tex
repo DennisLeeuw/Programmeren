@@ -1,0 +1,11 @@
+Met Python kan je ook data van bestanden lezen en data naar bestanden schrijven dit onderdeel gaat over deze mogelijkheden. We gaan eenvoudige data lezen en schrijven van en naar een bestand.
+
+Het werken met bestanden bestaat eruit dat we een bestand eerst moeten openen, daarna moeten we ervan lezen of naar schrijven, waarna we het bestand weer moeten sluiten. Om niet elke keer te hoeven aangeven om welk bestand het gaat gebruiken we een zogenaamde file handle. Je geeft in je script \'e\'en keer aan welk bestand je wilt openen en koppelt daaraan een file handle en daarna gebruik je alleen nog deze file handle om te lezen of te schrijven. Tot slot moet je die file handle sluiten.
+
+In Python ziet dat er ongeveer zo uit:
+\begin{lstlisting}[language=python]
+# File handle korten we af als fhdl
+fhdl = open("testbestand.txt")
+fhdl.write("Regel in bestand")
+fhdl.close()
+\end{lstlisting}

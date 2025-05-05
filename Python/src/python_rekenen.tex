@@ -1,0 +1,47 @@
+Programmeertalen kunnen ook gebruikt worden om te rekenen\index{rekenen}, daarbij kunnen ze de traditionele rekenmachine vervangen. Start de Python-interpreter en gebruik Python als simpele rekenmachine zoals dat hieronder staat:
+\begin{lstlisting}[language=Python]
+Python 3.11.2 (main, Nov 30 2024, 21:22:50) [GCC 12.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> 6+7
+13
+>>> 7-6
+1
+>>> 6-7
+-1
+>>> 7*6
+42
+>>> 7/6
+1.1666666666666667
+>>> 
+\end{lstlisting}
+We zien heel simpele zaken als optellen\index{optellen}\index{rekenen!optellen}, aftrekken\index{aftrekken}\index{rekenen!aftrekken}, vermenigvuldigen\index{vermenigvuldigen}\index{rekenen!vermenigvuldigen} en delen\index{delen}\index{rekenen!delen}.
+
+Zo kunnen we ook machtsverheffen\index{machtsverheffen}\index{rekenen!machtsverheffen} en worteltrekken\index{worteltrekken}\index{rekenen!worteltrekken}:
+\begin{lstlisting}[language=Python]
+Python 3.11.2 (main, Nov 30 2024, 21:22:50) [GCC 12.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> 5**2
+25
+>>> 25**(1/2)
+5.0
+>>>
+\end{lstlisting}
+
+We gebruiken hier () om het delen van 1/2 voorrang te geven op het machtsverheffen. We kunnen met haakjes dus bepalen wat er voorrang heeft boven de normale rekenregels:
+\begin{lstlisting}[language=Python]
+>>> 5+6*7+8
+55
+>>> (5+6)*(7+8)
+165
+\end{lstlisting}
+Vermenigvuldigen gaat voor optellen. Bij de eerste som wordt dus eerst 6*7 gedaan waarna er 5 en 8 bij opgeteld worden. Als we haakjes gebruiken worden eerst 5+6 en 7+8 uitgevoerd waarna de uikomsten van de beide optellingen (11 en 15) met elkaar vermenigvuldigd worden.
+
+Bij het worteltrekken zit er een kleine onnauwkeurigheid als we bijvoorbeeld met derdemachten werken, gelukkig komen die bij ons niet vaak voor:
+\begin{lstlisting}[language=Python]
+>>> 5**3
+125
+>>> 125**(1/3)
+4.999999999999999
+\end{lstlisting}
+De onnauwkeurigheid wordt veroorzaakt omdat 1/3 geen mooi rond getal is en dus zelf al een onnauwkeurigheid heeft. Er zijn functies in Python om wel nauwkeurig te werken met wortels, maar daar gaan we hier niet nader op in.
+

@@ -1,0 +1,69 @@
+Splits je programma in twee bestanden. E\'en met de functie en \'e\'en met het hoofdprogramma. Het bestand met de functie komt er dan zo uit te zien:
+\begin{lstlisting}[language=python]
+def vraag_ip(nummer):
+    while True:
+        ip = input(f"Wat is IP-adres nummer {nummer}: ")
+        if ip not in lst_netwerk:
+            return(ip)
+        print(f"IP-adres {ip} komt al in de lijst voor")
+\end{lstlisting}
+Sla dit stuk code op als mylib.py
+
+Voor je hoofdprogramma blijft er dan over:
+\begin{lstlisting}[language=python]
+lst_netwerk = []
+
+print("We vragen om 3 IP-adressen uit uw netwerk")
+
+for i in range(1,4):
+    antw = vraag_ip(i)
+    lst_netwerk.append(antw)
+
+print(lst_netwerk)
+\end{lstlisting}
+Sla dit stuk code op als \texttt{myprog.py}.
+
+Nu willen we graag onze functie weer kunnen gebruiken in het hoofdprogramma, daarvoor hebben we \texttt{import}. Met \texttt{import} kunnen we externe code laden in ons programma. We voegen een \texttt{import} regel toe als eerste regel van ons hoofdprogramma:
+\begin{lstlisting}[language=python]
+import mylib
+\end{lstlisting}
+Let op: Bij de \texttt{import} komt er na de naam van het bestand geen \texttt{.py}! Doe je dit wel dan krijg je een error-melding:
+\begin{lstlisting}[language=python]
+Traceback (most recent call last):
+  File "/home/Boeken/Programmeren/Python/code/myprog.py", line 1, in <module>
+    import mylib.py
+ModuleNotFoundError: No module named 'mylib.py'; 'mylib' is not a package
+\end{lstlisting}
+
+Een library of module zoals dat in Python heet kan uit meerdere functies bestaan. Verschillende libraries zouden een functie met dezelfde naam kunnen hebben. Als we beide libraries zouden importeren in ons programma wat moet er dan gebeuren met de twee functies die dezelfde naam hebben? Om dit uit elkaar te houden wordt bij de function-call de naam van de functie vooraf gegaan door de naam van de library. Onze functie \texttt{vraag\_ip} heet dus vanaf nu \texttt{mylib.vraag\_ip}. Dit heet een \textquote{namespace}. Een functie behoort dus tot en bepaalde namespace. In ons geval is de namespace \texttt{mylib}.
+
+In ons programma \texttt{myprog} zullen we de oude functie call \texttt{vraag\_ip} moeten aanpassen naar \texttt{mylib.vraag\_ip}. Doe dit in je eigen code.
+
+Na de aanpassing van de naam van de functie call in \texttt{myprog.py} zal je na het starten van \texttt{myprog.py} merken dat Python een error geeft nadat je de eerste IP-adres hebt ingevuld. Python geeft als melding:
+\begin{lstlisting}[language=python]
+NameError: name 'lst_netwerk' is not defined
+\end{lstlisting}
+Python kent opeens de lijst lst\_netwerk niet meer. De variabele die we eerst nog vanuit ons hoofdprogramma konden gebruiken in een functie kunnen we nu niet meer gebruiken! Kennelijk is een functie als onderdeel van het programma iets anders dan als het de functie uit een bestand vandaan komt. En dat klopt ook. Namespaces zijn ge\"isoleerd, ook wat variabelen betreft. We moeten de functie dus gaan vertellen wat onze lijst is.
+
+Om de functie te vertellen wat onze lijst is hebben we een extra paramater bij de functie definitie nodig. We noemen de tweede parameter \texttt{net\_lst}, de lijst krijgt dus binnen de functie een andere naam dan in het hoofdprogramma. We gebruiken de naam van de lijst bij de \texttt{if} in de functie en zullen dus ook daar de naam moeten aanpassen. Met deze wijzigingen komt onze library functie er zo uit te zien:
+\begin{lstlisting}[language=python]
+def vraag_ip(nummer,net_lst):
+    while True:
+        ip = input(f"Wat is IP-adres nummer {nummer}: ")
+	if ip not in net_lst:
+            return(ip)
+        print(f"IP-adres {ip} komt al in de lijst voor")
+\end{lstlisting}
+
+In ons hoofdprogramma moet de functie call nu 2 argumenten hebben:
+\begin{lstlisting}[language=python]
+    antw = mylib.vraag_ip(i,lst_netwerk)
+\end{lstlisting}
+
+Waarom hebben we deze splitsing aangebracht? Daar zijn een aantal redenen voor:
+\begin{description}
+	\item[Leesbaarheid] Door functies in hun eigen bestand op te slaan wordt het hoofdprogramma overzichtelijker
+	\item[Beheer] We kunnen verschillende functies groeperen in hun eigen bestand
+	\item[Hergebruik] We kunnen de functies nu in verschillende programma's gebruiken, wat programmeer werk scheelt
+\end{description}
+

@@ -1,0 +1,12 @@
+In software kunnen er allerlei zaken fout gaan. Er kan een fout in de software zitten, er kan een conditie ontstaan die niet voorzien is of een gebruiker kan verkeerde data invoeren. Een programmeerfout heet een bug en deze kan hersteld worden door de code aan te passen. Het probleem is vaak dat we de fout niet zien en dat deze pas naar voren komt als veel verschillende gebruikers de software getest hebben in allerlei verschillende omstandigheden. Gebruikers hebben dan de neiging om te roepen \textquote{Hij doet het niet} inplaats van dat ze kunnen aangeven waar in de code het fout gegaan is. Binnen de software zou het dus fijn zijn als we kunnen detecteren dat er iets fout gegaan is en dat de software aangeeft wat er fout gegaan is.
+
+Binnen het vakgebied van software development zijn er verschillende termen voor fouten die kunnen optreden. De meest algemene term is de \texttt{bug}. Een bug is een fout in de logica of structuur van de software. De bug zorgt ervoor dat het programma niet doet wat je zou willen of het kan een \texttt{error} veroorzaken. Een \texttt{error} is een algemene benaming voor iets dat fout gaat in de software. Dit kan het kan een syntax error of een runtime error zijn. Een error zorgt er meestal voor dat je programma crashed. Python zal een error-melding geven. Tot slot is er nog de \texttt{exception}. De exception is een specifiek soort error die optreedt tijdens het uitvoeren van een programma, namelijk de runtime error.
+
+We hebben dus een syntax error die onstaat doordat de programmeur zich niet aan de syntax van Python houdt:
+\begin{lstlisting}[language=python]
+if x = 5:
+\end{lstlisting}
+Voor een vergelijking gebruiken we in Python == en niet =. Dit is een syntax-error en die moeten wij als programmeur oplossen.
+
+Runtime errors kunnen ontstaan tijdens het draaien van het programma. Ze zijn dus niet syntactisch fout, maar zijn het gevolg van de werking van het programma. Je zou bijvoorbeeld een bestand kunnen opvragen dat er niet is, of een getal delen door 0. Dat zijn allemaal zaken die optreden tijdens de werking van het programma, die je niet van te voren kon weten. Je had er natuurlijk wel op kunnen controleren. Je had kunnen kijken of het bestand bestond voordat je het wilde opvragen en je had kunnen kijken of de deler 0 is, voordat je de deling uitvoerde. Deze fouten worden exceptions genoemd en exceptions kunnen we afvangen.
+

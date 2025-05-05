@@ -1,0 +1,15 @@
+Stel dat we een formule 1 racespel willen maken. We hebben voor dat spel een aantal auto's nodig die een aantal rondjes over een circuit racen. We zouden een script kunnen maken per auto en aan dat script het merk van de automodel, het team waarvoor gereden wordt, en de coureur mee kunnen geven. Die scripts kunnen we afzonderlijk aanroepen, maar daarmee hebben we nog geen race. We zouden ook een functie kunnen maken die we auto noemen en deze elke keer aanroepen met de gewenste eigenschappen. Ook dat lijkt nog niet echt op de werkelijheid. Wat we zouden willen is dat er een auto template is van waaruit we alle auto's kunnen maken.
+
+Met object georienteerd programmeren kunnen we dat maken. In OOP\index{OOP} (Object Oriented Programming\index{Object Oriented Programming}) programmeer je een Class\index{Class}. Een Class is een template, daarin beschrijf je de eigenschappen van de auto en de functies die de auto kan uitvoeren. Als het programma draait kiezen de spelers hun auto, team en coureur en maak je van de Class een Object\index{Object} door bepaalde waarden te zetten. We zeggen dan dat we een Instance\index{Instance} van een Class hebben. Het Object is een specifiek object met bepaalde waarden (variabelen) gezet die het \textquote{uniek} maken. Deze waarden die gezet kunnen worden noemen we Instance Variables\index{Instance Variables}. Door voor elke speler zijn eigen instance van de class te maken hebben we dus voor elke speler zijn eigen object gebaseerd op zijn eigen instance variabelen.
+
+Tot slot willen we dat de auto een aantal rondjes gaat rijden op een circuit. Hiervoor hebben we Methodes\index{Methodes}. Methodes zijn functies die het object kan uitvoeren. We zouden een Methode kunnen hebben die zegt dat een auto een rondje moet rijden en als waarde geven we aan deze Methode 64 mee. De auto gaat nu 64 rondjes rijden. Er wordt dus een opdracht uitgevoerd.
+
+Er zijn ook zaken die voor elke auto hetzelfde zijn, omdat de regels zijn die formule 1 horen. Zo heeft elke auto 4 wielen, 1 stuur, is maximaal 200 cm breed en de hoogte van de auto is 950 cm gemeten vanaf de bodemplaat. Dit zijn waarden die voor elke auto hetzelfde zijn en kunnen dus niet gewijzigd worden. Dit zijn de zogenaamde Class Variables\index{Class Variables}.
+
+De Class voor dit object zouden we zo kunnen beschrijven:
+\begin{itemize}
+\item Instance variables: coureur, team, automodel
+\item Class variables: wielen=4, stuur=1, auto\_breedte=200, auto\_hoogte=950
+\item Methode(s): rondjes(aantal)
+\end{itemize}
+

@@ -1,0 +1,24 @@
+Een functie wordt in Python gedefinieerd met het sleutelwoord \textquote{def}, gevolgd door de naam van de functie, een paar haakjes, met daar tussen 0 of meer paramters en de functie-definitie wordt afgesloten met een dubbele punt. De code die de functie uitvoert, komt op de volgende regels en is ge\"indenteerd.
+\begin{lstlisting}[language=python]
+def naam_van_de_functie(parameters)
+    # code van de functie
+\end{lstlisting}
+
+De naam van de functie mag willekeurig gekozen worden, zolang als deze maar niet overeenkomt met een bestaande functie.
+
+Een functie staat los van het hoofdprogramma. Als je de functie aanroept in je hoofdprogramma, dan springt de computer naar de functie om als hij klaar is met de functie terug te keren naar waar die vandaan kwam:
+\begin{lstlisting}[language=python]
+# Functie, wordt niet uitgevoerd als het script start
+def naam_van_de_functie(parameters):
+    # code van de functie
+
+# Hoofdprogramma, hier start het script
+argument = "tekst"
+
+# Programma springt naar functie
+naam_van_de_functie(argument)
+
+# Nadat de functie be-eindigd is gaat het programma hier verder
+exit()
+\end{lstlisting}
+

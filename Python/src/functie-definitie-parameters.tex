@@ -1,0 +1,26 @@
+Het is vaak nodig dat je gegevens (data) meestuurt vanuit het programma naar een functie. De meegegeven data kan dan in variabelen binnen de functie gebruikt worden. Deze variabelen hebben een speciale naam: we noemen ze parameters. Elke paramater kan een argument bevatten. De argumenten zijn de daadwerkelijke data die we meegeven hebben. Laten we dat eens bekijken in een voorbeeld:
+\begin{lstlisting}[language=python]
+def groet(naam):
+    print(f"Hallo, {naam}")
+\end{lstlisting}
+De functie heeft als naam \textquote{groet} gekregen. Tussen haakjes staat de parameter (variabele) met de naam \textquote{naam} en de variable wordt in de functie gebruikt door het \texttt{print} statement.
+
+Wanneer je de functie \textquote{groet} aanroept met een naam als argument, zal het die naam gebruiken om je te begroeten. De complete code zou er zo uit kunnen zien:
+\begin{lstlisting}[language=python]
+def groet(naam):
+    print(f"Hallo, {naam}")
+
+groet("Dennis")
+\end{lstlisting}
+Dus \textquote{Dennis} is hier het argument.
+
+Een functie mag geen of meerdere parameters hebben. Als er geen parameters zijn dan staat er niets tussen de haakjes. De haakjes moeten er wel zijn! Wil je meer dan \'e\'en parameter meegeven dan moeten de verschillende parameters gescheiden worden door een komma:
+\begin{lstlisting}[language=python]
+def groet(voornaam, achternaam):
+    print(f"Hallo, {voornaam} {achternaam}")
+
+groet("Dennis", "Leeuw")
+\end{lstlisting}
+
+Een vereiste is dat als er 2 parameters door de functie gevraagd worden er ook twee argumenten geleverd moeten worden. Niet meer en ook niet minder. Komt het aantal argumenten niet overeen met het aantal parameters dan geeft Python een error melding.
+

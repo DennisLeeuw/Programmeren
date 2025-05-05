@@ -1,0 +1,21 @@
+Exceptions zijn runtime errors en die we kunnen afvangen in de software met een zogenaamd \texttt{try} en \texttt{except} block:
+\begin{lstlisting}[language=python]
+try:
+    resultaat = 10 / 0
+except ZeroDivisionError:
+    print("Je kunt niet delen door nul.")
+\end{lstlisting}
+
+Per fout die kan ontstaan is er een speciale exception (except). De lijst met standaard Python exceptions kan je vinden als de Built in exceptions (\url{https://www.w3schools.com/python/python_ref_exceptions.asp}), deze exceptions kunnen altijd afgevangen worden met \texttt{try}.
+
+Je kan ook meerdere excepts afvangen of een generieke error terug geven aan de gebruiker. Dat laatste is natuurlijk niet gebruikersvriendelijk, maar kan soms de enige manier zijn nog iets aan een gebruiker te laten weten als er een exception optreedt.
+
+Een integer kan geen string zijn, dus daar kunnen we op testen:
+\begin{lstlisting}[language=python]
+try:
+    x = int('abc')
+except ValueError:
+    print("Dit is geen integer")
+\end{lstlisting}
+
+

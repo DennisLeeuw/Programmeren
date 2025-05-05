@@ -1,0 +1,11 @@
+\babel@toc {english}{}\relax 
+\babel@toc {dutch}{}\relax 
+\contentsline {chapter}{Over dit Document}{i}{chapter*.1}%
+\contentsline {chapter}{\numberline {1}Functies}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}De functie definitie}{1}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Functie parameters}{2}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Functie return-waarden}{3}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.1.3}Variabelen en functies}{3}{subsection.1.1.3}%
+\contentsline {section}{\numberline {1.2}Samenvatting}{4}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Vragen}{4}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Opdrachten}{5}{section.1.4}%

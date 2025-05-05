@@ -1,0 +1,185 @@
+\documentclass[a4paper,12pt,twoside,openright,titlepage]{book}
+
+%Additional packages
+\input{styles/packages}
+
+% Listing style
+\input{styles/lstset}
+
+% Uncomment for production
+% \syntaxonly
+
+% Style
+\pagestyle{headings}
+
+% Define document
+\author{D. Leeuw}
+\title{Python}
+\date{\today\\v.0.1.0}
+
+\begin{document}
+\selectlanguage{dutch}
+
+\maketitle
+
+\copyright\ 2025 Dennis Leeuw\\
+
+\input{styles/licentie}
+
+%%%%%%%%%%%%%%%%%%%
+%%% Introductie %%%
+%%%%%%%%%%%%%%%%%%%
+
+\frontmatter
+\chapter{Over dit Document}
+%\input{src/OverDitDocument}
+%\input{src/DocChanges_Server}
+
+%%%%%%%%%%%%%%%%%
+%%% De inhoud %%%
+%%%%%%%%%%%%%%%%%
+\tableofcontents
+
+\mainmatter
+% requires: 
+% provides: programmeren, python
+\chapter{Wat is Python?}
+\input{src/programmeren}
+\section{Opdrachten}
+\input{src/opdrachten-what_is_python}
+\section{Installatie van de Python-interpreter}
+\subsection{Windows}
+\input{src/python_windows_installatie}
+
+\chapter{Python als rekenmachine}
+\input{src/python_rekenen}
+\section{Opdrachten}
+\input{src/opdrachten-rekenen}
+\section{Verdieping modulo en floor division}
+\input{src/modulo}
+\subsection{Opdrachten}
+\input{src/opdrachten-modulo}
+
+\chapter{IDE}
+\section{Visual Studio Code}
+
+\chapter{Variabelen}
+\section{int, float, complex}
+\section{string}
+\section{boolean}
+\section{Casting}
+
+% Binary Types: bytes, bytearray, memoryview
+% None Type: 	NoneType
+% \chapter{Data types}
+
+\chapter{Operators}
+
+\chapter{If-statements (Condities)}
+
+\chapter{Ordenen van data}
+\section{list, tuple, range}
+\section{Dictionaries (Key/Value pairs)}
+\section{set, frozenset}
+
+\chapter{For-statements}
+
+\chapter{While-statements}
+
+\chapter{For, While}
+\input{src/forwhile}
+\section{Verschillen tussen for en while}
+\input{src/forwhile-verschillen}
+\subsection{For-loop}
+\input{src/for-kenmerken}
+\subsection{While-loop}
+\input{src/while-kenmerken}
+\section{Samenvatting}
+\input{src/forwhile-samenvatting}
+\section{Vragen}
+\input{src/vragen-forwhile}
+\section{Opdrachten}
+\input{src/opdrachten-forwhile}
+
+\chapter{Break, Continue}
+\section{Break: ontsnappen aan de loop}
+\input{src/break}
+\section{Continue: stappen overslaan}
+\input{src/continue}
+\section{Opdrachten}
+\input{src/opdrachten-breakcontinue}
+
+\chapter{Functies}
+\input{src/functie}
+\section{De functie definitie}
+\input{src/functie-definitie}
+\subsection{Functie parameters}
+\input{src/functie-definitie-parameters}
+\subsection{Functie return-waarden}
+\input{src/functie-definitie-return}
+\section{Samenvatting}
+\input{src/functie-samenvatting}
+\section{Opdrachten}
+\input{src/opdrachten-functie}
+
+\chapter{Built in Functies}
+print(), range(), slice()
+\section{Werken met bin(), hex(), pow()}
+len()
+input()
+\section{Overzicht built in functies van w3schools}
+
+opdracht: round()
+
+\chapter{PIP, extra packages}
+
+
+\chapter{Werken met bestanden}
+\input{src/python_bestanden}
+\section{Schrijven naar een bestand}
+\input{src/python_bestanden_write}
+\section{Lezen van een bestand}
+\input{src/python_bestanden_read}
+
+\chapter{Error afhandeling (Try/Except)}
+
+% \chapter{List Comprehensions???}
+
+% \chapter{Datum en tijd (datetime module)}
+
+\chapter{Objects en Classes (OOP introductie)}
+\input{src/oop_basics}
+\section{Opdrachten}
+\input{src/opdrachten-oop}
+
+% \chapter{Get Data from APIs}
+
+% \chapter{Data Analysis with Pandas}
+
+% \chapter{Basic Graphs with Mathplotlib}
+
+\chapter{Antwoorden van de opdrachten}
+\section{Wat is Python?}
+\input{src/antwoorden-what_is_python}
+\section{Python als rekenmachine}
+\input{src/antwoorden-rekenen}
+\subsection{Verdieping modulo en floor division}
+\input{src/antwoorden-modulo}
+\section{For, While}
+\input{src/antwoorden-forwhile}
+\section{Break, Continue}
+\input{src/antwoorden-breakcontinue}
+\section{Functies}
+\input{src/antwoorden-functie}
+\section{Objects en Classes (OOP introductie)}
+\input{src/antwoorden-oop}
+
+
+%%%%%%%%%%%%%%%%%%%%%
+%%% Index and End %%%
+%%%%%%%%%%%%%%%%%%%%%
+%\backmatter
+\printindex
+\end{document}
+
+%%% Last line %%%

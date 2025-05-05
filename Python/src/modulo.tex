@@ -1,0 +1,48 @@
+Bij het rekenen hebben we ook nog de geheeltallige deling (floor division) en de bijkomende modulo- of klok-rekenen. Om deze begrippen uit te leggen beginnen we met een voorbeeld.
+
+Stel we hebben bij het begin van een nieuw schooljaar 213 studenten die willen gaan studeren. Er kunnen uit praktische overwegingen 30 studenten in een klas. Hoeveel klassen kunnen we dan volledig vullen en hoeveel studenten blijven er over?
+
+Als we dit willen uitrekenen kunnen we het zo doen:
+\begin{lstlisting}[language=Python]
+>>> 213/30
+7.1
+>>> 30*7
+210
+>>> 213-210
+3
+\end{lstlisting}
+We hebben dus 7 klassen van 30 studenten en dus houden we 3 studenten over. Dit kan ook korter:
+\begin{lstlisting}[language=Python]
+>>> 213//30
+7
+>>> 213%30
+3
+\end{lstlisting}
+De dubbele slash // is de \textquote{floor division} ofwel die geeft weer hoeveel keer het volledige aantal in het totaal past. Met het \% character berekenen we de modulo, kortom wat blijft er over na de vorige berekening.
+
+Het voorgaande lijkt misschien een voorbeeld waar je niet zo vaak mee te maken krijgt, toch komen dit soort berekeningen redelijk vaak voor, wat duidelijk gemaakt wordt door de term klok-rekenen. Stieken doen we namelijk behoorlijk vaak aan modulo-rekenen, zonder dat we het weten. Als we horen dat we om 13:00 uur een afspraak hebben dan weten we dat dat om 1 uur is. Eigenlijk is onze \textquote{groep}-grote 12 en trekken we 12 van 13 af om op 1 uur uit te komen. Zo ook bij 16:00 uur waar we 12 van 16 aftrekken om op 4 uur uit te komen. Omdat we er altijd alleen maar 12 vanaf hoeven te trekken als het om de klok gaat valt het niet direct op, dat de echte wiskundige berekening feitelijk is:
+\begin{lstlisting}[language=Python]
+>>> 16/12
+1.3333333333333333
+>>> 12*1
+12
+>>> 16-12
+4
+\end{lstlisting}
+
+Om nog een stapje verder te gaan, het volgende voorbeeld. Stel we weten dat een auto er 6455768 seconden over doet om een bepaalde afstand af te leggen. Hoeveel uur, minuten en seconden heeft auto er dan over gedaan. Dat kunnen we berekenen met floor division en modulo-rekenen. We weten dat er 60 seconden in een minuut zitten en 3600 seconden in een uur. We gaan eerst de uren brekenen:
+\begin{lstlisting}[language=Python]
+>>> 6455768//3600
+1793
+>>> 6455768%3600
+968
+\end{lstlisting}
+We hebben dus 1793 uur gereden en er zijn 968 seconden over. Nu gaan we uitzoeken hoeveel minuten dat is en wat er dan nog aan seconden over blijft:
+\begin{lstlisting}[language=Python]
+>>> 968//60
+16
+>>> 968%60
+8
+\end{lstlisting}
+Er zijn dus 16 minuten verstreken en 8 seconden over. Het totaal komt dan uit op 1793 uur, 16 minuten en 8 seconden.
+

@@ -1,0 +1,11 @@
+\babel@toc {english}{}\relax 
+\babel@toc {dutch}{}\relax 
+\contentsline {chapter}{Over dit Document}{i}{chapter*.1}%
+\contentsline {section}{\numberline {0.1}Leerdoelen}{i}{section.0.1}%
+\contentsline {chapter}{\numberline {1}De herschreven code}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Het maken van een library}{3}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Libraries van anderen}{7}{chapter.3}%
+\contentsline {section}{\numberline {3.1}pip}{7}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Vragen en opdrachten}{9}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Vragen}{9}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Opdrachten}{9}{section.4.2}%

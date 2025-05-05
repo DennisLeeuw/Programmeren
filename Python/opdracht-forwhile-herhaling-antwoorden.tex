@@ -1,0 +1,76 @@
+Tuurlijk! Hier zijn 5 Python-opdrachten op MBO niveau 4, allemaal zonder functies, en met gebruik van een `for` of `while` loop. Ze zijn ideaal voor oefening met herhalingen en basislogica.
+
+---
+
+### 🐍 **Opdracht 1: Tafel van een getal**
+**Omschrijving:** Vraag de gebruiker om een getal, en toon de tafel van dat getal van 1 t/m 10.
+
+```python
+getal = int(input("Van welk getal wil je de tafel zien? "))
+
+for i in range(1, 11):
+    print(f"{getal} x {i} = {getal * i}")
+```
+
+---
+
+### 🔢 **Opdracht 2: Aftellen**
+**Omschrijving:** Laat de gebruiker een startgetal invoeren, en tel dan af tot 0 met een `while` loop.
+
+```python
+start = int(input("Voer een startgetal in: "))
+
+while start >= 0:
+    print(start)
+    start -= 1
+```
+
+---
+
+### 📊 **Opdracht 3: Gemiddelde berekenen**
+**Omschrijving:** Vraag de gebruiker om 5 cijfers (bijv. van toetsen), en bereken het gemiddelde.
+
+```python
+totaal = 0
+
+for i in range(5):
+    cijfer = float(input(f"Voer cijfer {i+1} in: "))
+    totaal += cijfer
+
+gemiddelde = totaal / 5
+print(f"Het gemiddelde is: {gemiddelde}")
+```
+
+---
+
+### ✅ **Opdracht 4: Wachtwoord herhalen**
+**Omschrijving:** Laat de gebruiker een wachtwoord invoeren. Blijf vragen tot het wachtwoord "geheim" is.
+
+```python
+wachtwoord = ""
+
+while wachtwoord != "geheim":
+    wachtwoord = input("Voer het wachtwoord in: ")
+
+print("Wachtwoord correct!")
+```
+
+---
+
+### 🎲 **Opdracht 5: Getallen raden**
+**Omschrijving:** De gebruiker moet een getal tussen 1 en 10 raden. De juiste waarde is 7. De loop stopt pas als hij goed geraden is.
+
+```python
+antwoord = 0
+
+while antwoord != 7:
+    antwoord = int(input("Raad een getal tussen 1 en 10: "))
+    if antwoord != 7:
+        print("Helaas, probeer opnieuw.")
+
+print("Goed geraden!")
+```
+
+---
+
+Laat me weten als je er meer wilt, of als je ze iets uitdagender of juist makkelijker wilt maken!

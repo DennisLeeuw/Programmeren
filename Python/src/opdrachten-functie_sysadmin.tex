@@ -1,0 +1,59 @@
+Opdrachten
+\begin{enumerate}
+\item Schijfruimte controleren
+	\begin{description}
+	\item[Doel] Werken met functies en modules.
+	\item[Opdracht] Schrijf een functie \textquote{controleer\_schijfruimte()} die controleert hoeveel vrije ruimte er beschikbaar is op de C-schijf en een waarschuwing geeft als dit minder dan 5 GB is.
+	\item[Tip] Gebruik de module \textquote{shutil} en de functie \textquote{disk\_usage()}
+	\item[Voorbeeldoutput] output naar de gebruiker:
+\begin{lstlisting}[language=python]
+De vrije ruimte op C:\ is 10.4 GB - voldoende
+\end{lstlisting}
+of:
+\begin{lstlisting}[language=python]
+Waarschuwing: minder dan 5 GB beschikbaar!
+\end{lstlisting}
+	\end{description}
+
+\item Automatisch gebruikers aanmaken
+	\begin{description}
+	\item[Doel] Functies met parameters schrijven.
+	\item[Opdracht] Maak een functie \textquote{maak\_gebruiker\_aan(gebruikersnaam)} die een nieuwe gebruiker zou kunnen aanmaken (simulatie, geen echte systeemverandering).
+	\item[Uitbreiding] Laat de functie een bevestiging printen, zoals:
+\begin{lstlisting}[language=python]
+Gebruiker 'student123' succesvol aangemaakt.
+\end{lstlisting}
+	\item[Bonus] Voeg een standaard wachtwoord toe als extra parameter.
+	\end{description}
+
+\item Logbestanden opschonen
+	\begin{description}
+	\item[Doel] Werken met bestandsbeheer via functies.
+	\item[Opdracht] Schrijf een functie \textquote{verwijder\_oude\_logs(pad)} die alle bestanden met '.log' in een opgegeven map verwijderd die ouder zijn dan 30 dagen.
+	\item[Tip] Gebruik \textquote{os}, \textquote{os.path} en \textquote{datetime}
+	\item[Voorbeeldinput] De functie call zou er zo uit kunnen zien:
+\begin{lstlisting}[language=python]
+verwijder_oude_logs("C:/logs")
+\end{lstlisting}
+	\end{description}
+
+\item Systeemrapport genereren
+	\begin{description}
+	\item[Doel] Functies combineren en rapporteren.
+	\item[Opdracht] Maak een functie \textquote{genereer\_systeemrapport()} die:
+		\begin{itemize}
+		\item de hoeveelheid RAM laat zien,
+		\item de CPU-info toont,
+		\item het IP-adres weergeeft.
+		\end{itemize}
+	\item[Tip] Gebruik modules zoals \textquote{psutil} en \textquote{socket}
+	\item[Voorbeeldoutput] De output zou er zo uit kunnen zien:
+\begin{lstlisting}[language=python]
+Systeemrapport:
+RAM: 8 GB
+CPU: Intel Core i5
+IP-adres: 192.168.1.101
+\end{lstlisting}
+	\end{description}
+\end{enumerate}
+
