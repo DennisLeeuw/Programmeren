@@ -1,6 +1,0 @@
-\babel@toc {english}{}\relax 
-\babel@toc {dutch}{}\relax 
-\contentsline {chapter}{Over dit Document}{i}{chapter*.1}%
-\contentsline {section}{\numberline {0.1}Leerdoelen}{i}{section.0.1}%
-\contentsline {chapter}{\numberline {1}Built in functies}{1}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Opdrachten}{1}{section.1.1}%
