@@ -1,0 +1,74 @@
+\documentclass[a4paper,12pt,twoside,openright,titlepage]{book}
+
+%Additional packages
+\input{styles/packages}
+
+% Listing style
+\input{styles/lstset}
+
+% Uncomment for production
+% \syntaxonly
+
+% Style
+\pagestyle{headings}
+
+% Define document
+\author{D. Leeuw}
+\title{Debugging}
+\date{\today\\v.0.1.0}
+
+\begin{document}
+\selectlanguage{dutch}
+
+\maketitle
+
+\copyright\ 2025 Dennis Leeuw\\
+
+\input{styles/licentie}
+
+%%%%%%%%%%%%%%%%%%%
+%%% Introductie %%%
+%%%%%%%%%%%%%%%%%%%
+
+\frontmatter
+\chapter{Over dit Document}
+\section{Leerdoelen}
+\input{src/leerdoelen-debugging}
+\section{Voorkennis}
+\input{src/voorkennis-debugging}
+
+%%%%%%%%%%%%%%%%%
+%%% De inhoud %%%
+%%%%%%%%%%%%%%%%%
+\tableofcontents
+
+\mainmatter
+
+\chapter{Bugs, errors en exceptions}
+\input{src/bug-error-exception}
+\section{Errors leren lezen}
+\input{src/errors_lezen}
+
+\chapter{Syntax Errors}
+\input{src/syntax_errors}
+
+\chapter{Handling exceptions}
+\input{src/exceptions}
+
+\chapter{Python Errors op Python site}
+\input{src/python_errors}
+
+\chapter{Vragen en opdrachten}
+\section{Vragen}
+\input{src/vragen-debugging}
+\section{Opdrachten}
+\input{src/opdrachten-webserver_test}
+
+%%%%%%%%%%%%%%%%%%%%%
+%%% Index and End %%%
+%%%%%%%%%%%%%%%%%%%%%
+%\backmatter
+\printindex
+\end{document}
+
+%%% Last line %%%
