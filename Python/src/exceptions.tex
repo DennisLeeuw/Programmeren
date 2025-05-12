@@ -1,4 +1,4 @@
-Exceptions zijn runtime errors en die we kunnen afvangen in de software met een zogenaamd \texttt{try} en \texttt{except} block:
+Exceptions\index{exceptions} zijn runtime errors\index{runtime errors} die we kunnen afvangen in de software met een zogenaamd \texttt{try}\index{try} / \texttt{except}\index{except} block:
 \begin{lstlisting}[language=python]
 try:
     resultaat = 10 / 0
@@ -6,16 +6,29 @@ except ZeroDivisionError:
     print("Je kunt niet delen door nul.")
 \end{lstlisting}
 
-Per fout die kan ontstaan is er een speciale exception (except). De lijst met standaard Python exceptions kan je vinden als de Built in exceptions (\url{https://www.w3schools.com/python/python_ref_exceptions.asp}), deze exceptions kunnen altijd afgevangen worden met \texttt{try}.
+Onder het kopje \texttt{try} wordt een actie uitgevoerd en bij het kopje \texttt{except} wordt de fout afgehandeld. De fout afhandeling kan een simpele print zijn zoals in het voorgaande voorbeeld waarbij je de gebruiker vertelt wat er fout gegaan is.
 
-Je kan ook meerdere excepts afvangen of een generieke error terug geven aan de gebruiker. Dat laatste is natuurlijk niet gebruikersvriendelijk, maar kan soms de enige manier zijn nog iets aan een gebruiker te laten weten als er een exception optreedt.
+Natuurlijk zou je zelf nooit door 0 delen, maar het kan zijn dat er een variabele is die in sommige situaties 0 wordt en dat daarna deze fout ontstaat. Zeker als een programma veel gebruik maakt van gebruikers invoer of data van anderen die via een bestand wordt ingelezen, dan kunnen er soms waarden in variabelen terecht komen die je niet zou verwachten. Zo kan er dan een fout situatie ontstaan die je vooraf niet bedacht had.
 
-Een integer kan geen string zijn, dus daar kunnen we op testen:
+De melding \textquote{Je kunt niet delen door nul} is ook geen zinnige meldig. We zouden hier meer informatie naar de gebruiker terug kunnen geven. Bijvoorbeeld om welke variabele het gaat, of wat de functie van de deling is. Het goed schrijven van een error-melding is vaak nog een hele kunst, omdat je ook niet altijd wat de technische kennis is van de gebruiker.
+
+Tijdens de werking van een programma kunnen er verschillende fouten ontstaan die afgevangen kunnen worden. Voor een overzicht van de mogelijke fouten en hun naam (except) is er een lijst van Built in exceptions\index{built in exceptions}\index{exceptions!built in} op W3Schools: \url{https://www.w3schools.com/python/python_ref_exceptions.asp}. Lees deze lijst door zodat je weet welke fouten je met try/except standaard kunt afvangen. Niet alle exceptions zullen meteen duidelijk zijn, maar een aantal zou je direct kunnen gaan gebruiken.
+
+Met try/except kunnen we bijvoorbeeld de input van een gebruiker controleren:
 \begin{lstlisting}[language=python]
-try:
-    x = int('abc')
-except ValueError:
-    print("Dit is geen integer")
+while True:
+    try:
+        x = int(input("Geef een nummer op: "))
+        break
+    except ValueError:
+        print("Dat was geen nummer, probeer het nog een keer.")
+print(f"De ingevoerde waarde is: {x}")
 \end{lstlisting}
 
+Dit werkt zo:
+\begin{enumerate}
+	\item De \texttt{while}-loop loopt door tot de \texttt{break} uitgevoerd kan worden. Daarna krijgt de gebruiker de melding welke waarde er opgegeven is.
+	\item De \texttt{try} vraagt aan de gebruiker om een getal in te voeren en dit getal moet een integer (int) zijn. Als dit niet zo is dan is er een error, een \texttt{ValueError}. Een error breekt de \texttt{try} meteen af zodat deze nooit bij de \texttt{break} komt.
+	\item De \texttt{except} vangt de error af en geeft een melding naar de gebruiker met wat deze fout gedaan heeft. De \texttt{while} zorgt ervoor dat we meteen weer bij de \texttt{try} terecht komen.
+\end{enumerate}
 
