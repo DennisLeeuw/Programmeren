@@ -1,0 +1,51 @@
+Errors in Python kunnen in het begin overweldigend zijn omdat er vrij veel informatie op het scherm wordt afgebeeld. Met enige training is er al snel duidelijkheid in de brei te ontdekken. Als voorbeeld nemen we deze code:
+\begin{lstlisting}[language=python]
+for a in list
+   print("Hallo {a}")
+\end{lstlisting}
+In deze code zitten verschillende fouten. Python stopt (crashed) bij de eerste fout die er waargenomen wordt.
+
+Als we de bovenstaande code runnen dan is de eerste error die we krijgen:
+\begin{lstlisting}[language=python]
+  File "/home/Boeken/Programmeren/Python/code/error.py", line 1
+    for a in list
+                 ^
+SyntaxError: expected ':'
+\end{lstlisting}
+We lezen de error-melding van onder naar boven. De melding is een SyntaxError, dus wij hebben iets niet goed gedaan. Met de caret (\textasciicircum) geeft Python aan waar er een syntactische fout is en als het mogelijk is geeft Python ook aan wat hij verwachtte (expected). In ons voorbeeld verwachtte Python een : na \texttt{list}.
+
+Nadat we deze fout hersteld hebben en we de code opnieuw runnen komt Python met de melding:
+\begin{lstlisting}[language=python]
+Traceback (most recent call last):
+  File "/home/Boeken/Programmeren/Python/code/error.py", line 1, in <module>
+    for a in list:
+TypeError: 'type' object is not iterable
+\end{lstlisting}
+Hier zien we een TypeError. Dat wil zeggen dat het type niet klopt. Python geeft aan dat het object niet iterable (doorloopbaar) is. Het moet dus gaan om de \texttt{list}, want die willen we doorlopen. Als we naar de code kijken dan klopt dat ook. \texttt{list} is nergens gedefinieerd. Zo zie je dat het soms niet meteen duidelijk is wat er fout gegaan is, maar dat je even door moet denken om de fout te vinden.
+
+We voegen aan het begin van het script de regel toe:
+\begin{lstlisting}[language=python]
+list = [Achmed, Tom, Quinten, Mohamed]
+\end{lstlisting}
+
+We krijgen nu een nieuwe error melding:
+\begin{lstlisting}[language=python]
+Traceback (most recent call last):
+  File "/home/Boeken/Programmeren/Python/code/error.py", line 1, in <module>
+    list = [Ahmed, Tom, Quinten, Mohamed]
+            ^^^^^
+NameError: name 'Ahmed' is not defined
+\end{lstlisting}
+Python geeft aan dat Ahmed \textquote{not defined} is. Hij ziet Achemd dus als variabele en niet als string. Dat komt omdat wij de quotes vergeten zijn. De regel had er natuurlijk zo uit moeten zien:
+\begin{lstlisting}[language=python]
+list = ["Ahmed", "Tom", "Quinten", "Mohamed"]
+\end{lstlisting}
+
+Nadat we dit verbeterd hebben draait de code zonder fouten en toch is de output niet correct. We zijn bij de \texttt{print} functie de \texttt{f} optie vergeten. Je hebt kennelijk foutloze code zonder dat het gewenste resultaat uit de code komt.
+
+Pas nadat we de \texttt{print} veranderd hebben in:
+\begin{lstlisting}[language=python]
+   print(f"Hallo {a}")
+\end{lstlisting}
+doet het script wat het moet doen.
+
