@@ -4,7 +4,7 @@ host="google.com"
 domain="www.google.com"
 
 def check_virtual_host(ip, domain):
-    url = f"https://{ip}"
+    url = f"http://{ip}"
     headers = {
         "Host": domain
     }
