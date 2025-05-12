@@ -1,0 +1,27 @@
+Modules kunnen hun eigen exceptions hebben. Een exception uit een module heeft de module naam als voorvoegsel:
+\begin{lstlisting}[language=python]
+try:
+    import requests
+except ModuleNotFoundError:
+    exit("De 'requests' module is niet aanwezig op dit systeem")
+
+url = "http://127.0.0.1"
+headers = {
+"Host: localhost"
+}
+timeout = 5
+
+try:
+    response = requests.get(url, headers=headers, timeout=timeout)
+    if response.status_code == 200:
+        print(f"De server op {ip} reageert op domein '{domain}' (HTTP {response.status_code}).")
+    else:
+        print(f"De server op {ip} reageert, maar gaf status {response.status_code} voor domein '{domain}'.")
+except requests.ConnectionError:
+    print(f"Geen verbinding mogelijk met {ip}.")
+except requests.Timeout:
+    print(f"Timeout bij het verbinden met {ip}.")
+except requests.RequestException as e:
+    print(f"Er trad een fout op: {e}")
+\end{lstlisting}
+Hier zien we dat de requests module zeker drie exceptions kent: \texttt{ConnectionError}, \texttt{Timeout} en de generieke error \texttt{RequestException}.
