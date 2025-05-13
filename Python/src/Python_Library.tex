@@ -1,4 +1,4 @@
-\documentclass[a4paper,12pt,twoside,openright,titlepage]{book}
+\documentclass[a4paper,12pt,twoside,openright,titlepage]{article}
 
 %Additional packages
 \input{styles/packages}
@@ -14,7 +14,7 @@
 
 % Define document
 \author{D. Leeuw}
-\title{Extending Python (Libraries)}
+\title{Extending Python (Modules)}
 \date{\today\\v.0.6.0}
 
 \begin{document}
@@ -30,35 +30,35 @@
 %%% Introductie %%%
 %%%%%%%%%%%%%%%%%%%
 
-\frontmatter
-\chapter{Over dit Document}
-\section{Leerdoelen}
+%B% \frontmatter
+\section{Over dit Document}
+\subsection{Leerdoelen}
 \input{src/leerdoelen-pip}
-\section{Voorkennis}
+\subsection{Voorkennis}
 \input{src/voorkennis-pip}
 
 %%%%%%%%%%%%%%%%%
 %%% De inhoud %%%
 %%%%%%%%%%%%%%%%%
-\tableofcontents
+%%% \tableofcontents
 
-\mainmatter
+%B% \mainmatter
 
-\chapter{Python code}
+\section{Python code}
 \input{src/rewritten_code.tex}
 
-\chapter{Het maken van een library}
+\section{Het maken van een library}
 \input{src/import-splitsing.tex}
 
-\chapter{Libraries van anderen}
+\section{Modules van anderen}
 \input{src/libraries}
-\section{pip}
+\subsection{pip}
 \input{src/pip}
 
-\chapter{Vragen en opdrachten}
-\section{Vragen}
+\section{Vragen en opdrachten}
+\subsection{Vragen}
 \input{src/vragen-library}
-\section{Opdrachten}
+\subsection{Opdrachten}
 \input{src/opdrachten-functie_sysadmin}
 
 %%%%%%%%%%%%%%%%%%%%%
