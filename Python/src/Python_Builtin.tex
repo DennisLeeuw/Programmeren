@@ -1,4 +1,4 @@
-\documentclass[a4paper,12pt,twoside,openright,titlepage]{book}
+\documentclass[a4paper,12pt,twoside,openright,titlepage]{article}
 
 %Additional packages
 \input{styles/packages}
@@ -16,37 +16,36 @@
 \author{D. Leeuw}
 \title{Python Built in functies}
 \date{\today\\v.0.5.0}
+\date{\today\\
+0.5.0\\
+\vfill
+\raggedright
+\copyright\ 2025 Dennis Leeuw\\
+\input{styles/licentie-titlepage}}
+
 
 \begin{document}
 \selectlanguage{dutch}
 
 \maketitle
 
-\copyright\ 2025 Dennis Leeuw\\
-
-\input{styles/licentie}
-
 %%%%%%%%%%%%%%%%%%%
 %%% Introductie %%%
 %%%%%%%%%%%%%%%%%%%
 
-\frontmatter
-\chapter{Over dit Document}
-\section{Leerdoelen}
+\section{Over dit Document}
+\subsection{Leerdoelen}
 \input{src/leerdoelen-builtin}
 
 %%%%%%%%%%%%%%%%%
 %%% De inhoud %%%
 %%%%%%%%%%%%%%%%%
-\tableofcontents
 
-\mainmatter
-
-\chapter{Built in functies}
+\section{Built in functies}
 \input{src/functie-builtin}
 %\section{Vragen}
 %\input{src/vragen-...}
-\section{Opdrachten}
+\subsection{Opdrachten}
 \input{src/opdrachten-builtin}
 
 %%%%%%%%%%%%%%%%%%%%%

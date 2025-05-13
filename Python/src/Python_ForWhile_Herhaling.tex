@@ -1,4 +1,4 @@
-\documentclass[a4paper,12pt,twoside,openright,titlepage]{book}
+\documentclass[a4paper,12pt,twoside,openright,titlepage]{article}
 
 %Additional packages
 \input{styles/packages}
@@ -15,31 +15,28 @@
 % Define document
 \author{D. Leeuw}
 \title{Python: For/While Herhaling}
-\date{\today\\v.1.0.0}
+\date{\today\\
+1.0.0\\
+\vfill
+\raggedright
+\copyright\ 2025 Dennis Leeuw\\
+\input{styles/licentie-titlepage}}
+
 
 \begin{document}
 \selectlanguage{dutch}
 
 \maketitle
 
-\copyright\ 2025 Dennis Leeuw\\
-
-\input{styles/licentie}
-
 %%%%%%%%%%%%%%%%%%%
 %%% Introductie %%%
 %%%%%%%%%%%%%%%%%%%
 
-\frontmatter
-
 %%%%%%%%%%%%%%%%%
 %%% De inhoud %%%
 %%%%%%%%%%%%%%%%%
-\tableofcontents
 
-\mainmatter
-
-\chapter{Opdrachten}
+\section{Opdrachten}
 \input{src/opdracht-forwhile-herhaling}
 
 %%%%%%%%%%%%%%%%%%%%%
