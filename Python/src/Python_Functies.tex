@@ -1,4 +1,4 @@
-\documentclass[a4paper,12pt,twoside,openright,titlepage]{book}
+\documentclass[a4paper,12pt,twoside,openright,titlepage]{article}
 
 %Additional packages
 \input{styles/packages}
@@ -15,56 +15,53 @@
 % Define document
 \author{D. Leeuw}
 \title{Python}
-\date{\today\\v.1.1.0}
+\date{\today\\
+1.1.0\\
+\vfill
+\raggedright
+\copyright\ 2020-2025 Dennis Leeuw\\
+\input{styles/licentie-titlepage}}
+
 
 \begin{document}
 \selectlanguage{dutch}
 
 \maketitle
 
-\copyright\ 2025 Dennis Leeuw\\
-
-\input{styles/licentie}
-
 %%%%%%%%%%%%%%%%%%%
 %%% Introductie %%%
 %%%%%%%%%%%%%%%%%%%
 
-\frontmatter
-\chapter{Over dit Document}
-\section{Leerdoelen}
+\section{Over dit Document}
+\subsection{Leerdoelen}
 \input{src/leerdoelen-functies}
-\section{Voorkennis}
+\subsection{Voorkennis}
 \input{src/voorkennis-functies}
 
 %%%%%%%%%%%%%%%%%
 %%% De inhoud %%%
 %%%%%%%%%%%%%%%%%
-\tableofcontents
 
-\mainmatter
-
-\chapter{Functies}
+\section{Functies}
 \input{src/functie}
-\section{De functie definitie}
+\subsection{De functie definitie}
 \input{src/functie-definitie}
-\subsection{Functie parameters}
+\subsubsection{Functie parameters}
 \input{src/functie-definitie-parameters}
-\subsection{Functie return-waarden}
+\subsubsection{Functie return-waarden}
 \input{src/functie-definitie-return}
-\subsection{Variabelen en functies}
+\subsubsection{Variabelen en functies}
 \input{src/functie-variabelen}
-\section{Samenvatting}
+\subsection{Samenvatting}
 \input{src/functie-samenvatting}
-\section{Vragen}
+\subsection{Vragen}
 \input{src/vragen-functie}
-\section{Opdrachten}
+\subsection{Opdrachten}
 \input{src/opdrachten-functie}
 
 %%%%%%%%%%%%%%%%%%%%%
 %%% Index and End %%%
 %%%%%%%%%%%%%%%%%%%%%
-%\backmatter
 \printindex
 \end{document}
 
