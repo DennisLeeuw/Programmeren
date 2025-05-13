@@ -1,4 +1,4 @@
-\documentclass[a4paper,12pt,twoside,openright,titlepage]{book}
+\documentclass[a4paper,12pt,twoside,openright,titlepage]{article}
 
 %Additional packages
 \input{styles/packages}
@@ -14,8 +14,8 @@
 
 % Define document
 \author{D. Leeuw}
-\title{Debugging}
-\date{\today\\v.0.1.0}
+\title{Python Debugging}
+\date{\today\\v.0.2.0}
 
 \begin{document}
 \selectlanguage{dutch}
@@ -30,37 +30,37 @@
 %%% Introductie %%%
 %%%%%%%%%%%%%%%%%%%
 
-\frontmatter
-\chapter{Over dit Document}
-\section{Leerdoelen}
+%B% \frontmatter
+\section{Over dit Document}
+\subsection{Leerdoelen}
 \input{src/leerdoelen-debugging}
-\section{Voorkennis}
+\subsection{Voorkennis}
 \input{src/voorkennis-debugging}
 
 %%%%%%%%%%%%%%%%%
 %%% De inhoud %%%
 %%%%%%%%%%%%%%%%%
-\tableofcontents
+%%% \tableofcontents
 
-\mainmatter
+%B% \mainmatter
 
-\chapter{Bugs, errors en exceptions}
+\section{Bugs, errors en exceptions}
 \input{src/bug-error-exception}
-\section{Errors leren lezen}
+\subsection{Errors leren lezen}
 \input{src/errors_lezen}
 
-\chapter{Syntax Errors}
+\section{Syntax Errors}
 \input{src/syntax_errors}
 
-\chapter{Runtime errors}
+\section{Runtime errors}
 \input{src/exceptions}
-\section{Module exceptions}
+\subsection{Module exceptions}
 \input{src/try-module_exceptions}
 
-\chapter{Vragen en opdrachten}
-\section{Vragen}
+\section{Vragen en opdrachten}
+\subsection{Vragen}
 \input{src/vragen-debugging}
-\section{Opdrachten}
+\subsection{Opdrachten}
 \input{src/opdrachten-webserver_test}
 
 %%%%%%%%%%%%%%%%%%%%%
