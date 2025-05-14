@@ -1,0 +1,69 @@
+\documentclass[a4paper,12pt,twoside,openright,titlepage]{article}
+
+%Additional packages
+\input{styles/packages}
+
+% Listing style
+\input{styles/lstset}
+
+% Uncomment for production
+% \syntaxonly
+
+% Style
+\pagestyle{headings}
+
+% Define document
+\author{D. Leeuw}
+\title{Python: For/While}
+\date{\today\\
+1.0.0\\
+\vfill
+\raggedright
+\copyright\ 2025 Dennis Leeuw\\
+\input{styles/licentie-titlepage}}
+
+
+\begin{document}
+\selectlanguage{dutch}
+
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%
+%%% Introductie %%%
+%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%
+%%% De inhoud %%%
+%%%%%%%%%%%%%%%%%
+
+\section{Wanneer een for- en wanneer een while-loop?}
+\input{src/forwhile-intro}
+\subsection{De verschillen}
+\input{src/forwhile-verschillen}
+\subsection{For kenmerken}
+\input{src/for-kenmerken}
+\subsection{While kenmerken}
+\input{src/while-kenmerken}
+\subsection{Samenvatting}
+\input{src/forwhile-samenvatting}
+
+\section{Break: ontsnappen aan de loop}
+\input{src/break}
+
+\section{Continue: stappen overslaan}
+\input{src/continue}
+
+\section{Vragen en opdrachten}
+\subsection{Vragen}
+\input{src/vragen-forwhile}
+\subsection{Opdrachten}
+\input{src/opdrachten-forwhile}
+
+%%%%%%%%%%%%%%%%%%%%%
+%%% Index and End %%%
+%%%%%%%%%%%%%%%%%%%%%
+%\backmatter
+\printindex
+\end{document}
+
+%%% Last line %%%
