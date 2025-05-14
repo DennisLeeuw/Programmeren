@@ -1,4 +1,4 @@
-Exceptions\index{exceptions} zijn runtime errors\index{runtime errors} die we kunnen afvangen in de software met een zogenaamd \texttt{try}\index{try} / \texttt{except}\index{except} block:
+Exceptions\index{exceptions} zijn runtime errors\index{runtime errors} ontstaan doordat er iets in de software gebeurd dat we niet hebben voorzien. Deze fouten worden pas gevonden door de software te gebruiken. Runtime errors hoeven geen fouten te zijn waarop de software crashed. We kunnen ze afvangen met een zogenaamd \texttt{try}\index{try} / \texttt{except}\index{except} block. Dat ziet er zo uit:
 \begin{lstlisting}[language=python]
 try:
     resultaat = 10 / 0
@@ -22,6 +22,7 @@ while True:
         break
     except ValueError:
         print("Dat was geen nummer, probeer het nog een keer.")
+
 print(f"De ingevoerde waarde is: {x}")
 \end{lstlisting}
 
