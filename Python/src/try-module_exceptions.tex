@@ -1,16 +1,28 @@
 Modules kunnen hun eigen exceptions hebben. Een exception uit een module heeft de module naam als voorvoegsel:
 \begin{lstlisting}[language=python]
+#----------------#
+# Import modules #
+#----------------#
 try:
     import requests
 except ModuleNotFoundError:
     exit("De 'requests' module is niet aanwezig op dit systeem")
 
+#-------------------------------#
+# Variabelen voor ons programma #
+#-------------------------------#
+# Tegen welke host en port gaan we testen
 url = "http://127.0.0.1"
+# Header met domain name
 headers = {
 "Host: localhost"
 }
+# Timeout bij geen reactie
 timeout = 5
 
+#----------------------------------#
+# Test de webserver op domain name #
+#----------------------------------#
 try:
     response = requests.get(url, headers=headers, timeout=timeout)
     if response.status_code == 200:
