@@ -35,7 +35,7 @@ Traceback (most recent call last):
 ModuleNotFoundError: No module named 'mylib.py'; 'mylib' is not a package
 \end{lstlisting}
 
-Een library of module zoals dat in Python heet kan uit meerdere functies bestaan. Verschillende libraries zouden een functie met dezelfde naam kunnen hebben. Als we beide libraries zouden importeren in ons programma wat moet er dan gebeuren met de twee functies die dezelfde naam hebben? Om dit uit elkaar te houden wordt bij de function-call de naam van de functie vooraf gegaan door de naam van de library. Onze functie \texttt{vraag\_ip} heet dus vanaf nu \texttt{mylib.vraag\_ip}. Dit heet een \textquote{namespace}. Een functie behoort dus tot en bepaalde namespace. In ons geval is de namespace \texttt{mylib}.
+Een library of module zoals dat in Python heet kan uit meerdere functies bestaan. Verschillende modules zouden een functie met dezelfde naam kunnen hebben. Als we twee modules zouden importeren in ons programma waarbij in beide een functie voorkomt met dezelfde naam dan onstaat er een probleem. Wat moet er dan gebeuren met de twee functies die dezelfde naam hebben? Om dit uit elkaar te houden wordt bij de function-call de naam van de functie vooraf gegaan door de naam van de module. Onze functie \texttt{vraag\_ip} heet dus vanaf nu \texttt{mylib.vraag\_ip}. Dit heet een \textquote{namespace}. Een functie behoort dus tot en bepaalde namespace. In ons geval is de namespace \texttt{mylib}.
 
 In ons programma \texttt{myprog} zullen we de oude functie call \texttt{vraag\_ip} moeten aanpassen naar \texttt{mylib.vraag\_ip}. Doe dit in je eigen code.
 
