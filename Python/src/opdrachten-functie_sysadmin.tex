@@ -18,7 +18,7 @@ Waarschuwing: minder dan 5 GB beschikbaar!
 \item Automatisch gebruikers aanmaken
 	\begin{description}
 	\item[Doel] Functies met parameters schrijven.
-	\item[Opdracht] Maak een functie \textquote{maak\_gebruiker\_aan(gebruikersnaam)} die een nieuwe gebruiker zou kunnen aanmaken (simulatie, geen echte systeemverandering).
+	\item[Opdracht] Maak een functie \textquote{maak\_gebruiker\_aan(gebruikersnaam)} die een nieuwe gebruiker zou kunnen aanmaken (simulatie, geen echte systeemverandering, dus print wat er gedaan zou zijn).
 	\item[Uitbreiding] Laat de functie een bevestiging printen, zoals:
 \begin{lstlisting}[language=python]
 Gebruiker 'student123' succesvol aangemaakt.
@@ -37,7 +37,7 @@ verwijder_oude_logs("C:/logs")
 \end{lstlisting}
 	\end{description}
 
-\item Systeemrapport genereren
+\item Systeemrapport genereren (informatie)
 	\begin{description}
 	\item[Doel] Functies combineren en rapporteren.
 	\item[Opdracht] Maak een functie \textquote{genereer\_systeemrapport()} die:
@@ -53,6 +53,25 @@ Systeemrapport:
 RAM: 8 GB
 CPU: Intel Core i5
 IP-adres: 192.168.1.101
+\end{lstlisting}
+	\end{description}
+\end{enumerate}
+
+\begin{enumerate}
+\item Systeemrapport genereren (monitoring)
+	\begin{description}
+	\item[Doel] Actuele informatie opvragen met een functie
+	\item[Opdracht] Maak een functie \textquote{genereer\_systeemrapport()} die:
+		\begin{itemize}
+		\item de hoeveelheid vrij beschikbare RAM laat zien,
+		\item de huidige CPU-frequentie toont.
+		\end{itemize}
+	\item[Tip] Gebruik module \textquote{psutil}
+	\item[Voorbeeldoutput] De output zou er zo uit kunnen zien:
+\begin{lstlisting}[language=python]
+Systeemrapport:
+RAM beschikbaar: 6 GB
+CPU frequentie: 2,56 MHz
 \end{lstlisting}
 	\end{description}
 \end{enumerate}
