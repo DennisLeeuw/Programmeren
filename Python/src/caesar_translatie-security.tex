@@ -1,14 +1,14 @@
-Tijdens de security lessen hebben jullie in hoofdstuk 8 encryptie behandeld gekregen. Daarin werd de Caesar Cipher behandeld. Het verschuiven van tekst in het alfabet om zo de tekst onleesbaar te maken. Je zou de letters \'e\'en plaat kunnen opschuiven zodat een a een b wordt en een c een d etc. Stel bijvoorbeeld dat we het bericht hebben 'Dit is een geheim bericht' en we schuiven alle letters \'e\'en plaats op dan wordt het ge-encrypte bericht 'Eju jt ffo hfjn cfsjdiu'. In Caesar zijn tijd werd dit met de hand gedaan, wij hebben computers en Python, dus gaan we dit automatiseren.
-
-We hebben gezien dat de reeks nummers voor uppercase letters een aparte reeks is van de reeks met lowercase letters. Daar moeten we rekening mee houden. Ook als we bijvoorbeeld de letter z \'e\'en plaats opschuiven dan moet het de a worden en niet \{ zoals dat volgens de ASCII-tabel zou worden. Om te weten te komen of een variabele uppercase of lowercase is kunnen we \texttt{islower} en \texttt{isupper} gebruiken. Dat ziet er in Python code zo uit:
+We hebben gezien dat de reeks nummers voor uppercase letters een aparte reeks is van de reeks met lowercase letters. Daar moeten we rekening mee houden. Ook als we bijvoorbeeld de letter z \'e\'en plaats opschuiven dan moet het de a worden en niet \{ zoals dat volgens de ASCII-tabel zou worden. Om te weten te komen of een variabele uppercase of lowercase is kunnen we \texttt{islower} en \texttt{isupper} gebruiken. Voor het detecteren of een variabele een cijfer is is er \texttt{isnumeric}. Dat ziet er in Python code zo uit:
 \begin{lstlisting}[language=python]
-chars = [ 'a', 'A', 'B', 'b' ]
+chars = [ 'a', 'A', '1', 'B', 'b', '2' ]
 for char in chars:
     if char.islower():
         print(f"{char} is lowercase")
     elif char.isupper():
         print(f"{char} is uppercase")
+    elif char.isnumeric():
+        print(f"{char} is numeric")
 \end{lstlisting}
-Voor getallen is er \texttt{isnumeric}.
 
-Met deze voorkennis en de informatie uit het boek Security van Boris Sondagh maak je een script dat een substitutie uitvoert (encryptie). Gebruik een variabele voor het aantal keer dat er geschoven moet worden in het alfabet. Kies voor deze variabele een waarde tussen 1 en 10 om de code niet te complex te maken. Denk erom dat je na de Z weer bij A moet beginnen, na z weer bij a en na 9 komt weer 0. Leestekens veranderen niet.
+Maak een script dat een substitutie uitvoert (encryptie). Gebruik een variabele voor het aantal keer dat er geschoven moet worden in het alfabet, geef deze variabele een waarde tussen 1 en 9 om de code niet te complex te maken. Denk erom dat je na de Z weer bij A moet beginnen, na z weer bij a en na 9 komt weer 0. Leestekens veranderen niet.
+
