@@ -1,0 +1,69 @@
+\documentclass[a4paper,12pt,twoside,openright,titlepage]{article}
+
+%Additional packages
+\input{styles/packages}
+
+% Listing style
+\input{styles/lstset}
+
+% Uncomment for production
+% \syntaxonly
+
+% Style
+\pagestyle{headings}
+
+% Define document
+\author{D. Leeuw}
+\title{Python Caesar Translatie}
+\date{\today\\
+\vfill
+\raggedright
+\copyright\ 2020-2025 Dennis Leeuw\\
+\input{styles/licentie-titlepage}}
+
+
+\begin{document}
+\selectlanguage{dutch}
+
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%
+%%% Introductie %%%
+%%%%%%%%%%%%%%%%%%%
+
+%B% \frontmatter
+\section{Over dit Document}
+\subsection{Leerdoelen}
+\input{src/leerdoelen-builtin}
+\subsection{Voorkennis}
+%\input{src/voorkennis-builtin}
+
+%%%%%%%%%%%%%%%%%
+%%% De inhoud %%%
+%%%%%%%%%%%%%%%%%
+%%% \tableofcontents
+
+%B% \mainmatter
+
+\section{ASCII-tabel}
+\input{src/ascii-table-intro}
+\input{src/ascii-table}
+\input{src/ascii-char2int}
+
+\section{Andere vertaaltabellen}
+\input{src/codetabellen}
+
+\section{Python conversie functies}
+\input{src/builtin-char2int}
+
+\section{Caesar Translatie}
+\input{src/caesar_translatie-security}
+
+%%%%%%%%%%%%%%%%%%%%%
+%%% Index and End %%%
+%%%%%%%%%%%%%%%%%%%%%
+%\backmatter
+\printindex
+\end{document}
+
+%%% Last line %%%
