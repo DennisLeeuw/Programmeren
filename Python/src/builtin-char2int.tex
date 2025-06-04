@@ -1,2 +1,20 @@
-Python heeft builtin functies die nummers kunnen omzetten naar characters en characters naar nummers. Deze functies kan je vinden op o.a. de site van W3Schools: \url{https://www.w3schools.com/python/python_ref_functions.asp}. Zoek de functie op die je nodig hebt om een character om te zetten naar een number en de functie die het omgekeerde doet. Test de functies in een script.
+Python heeft builtin functies die nummers kunnen omzetten naar characters en characters naar nummers. Deze functies kan je vinden op o.a. de site van W3Schools: \url{https://www.w3schools.com/python/python_ref_functions.asp} of op de site van Python (\url{https://docs.python.org/3/library/functions.html}). Zoek de functie op die je nodig hebt om een character om te zetten naar een number en de functie die het omgekeerde doet. Test de functies in een script.
+
+We hebben gezien dat de reeks nummers voor uppercase letters een aparte reeks is van de reeks met lowercase letters. Daar moeten we rekening mee houden. Ook als we bijvoorbeeld de letter z \'e\'en plaats opschuiven dan moet het de a worden en niet \{ zoals dat volgens de ASCII-tabel zou worden. Om te weten te komen of een variabele uppercase of lowercase is kunnen we \texttt{islower} en \texttt{isupper} gebruiken. Voor het detecteren of een variabele een cijfer is is er \texttt{isnumeric}. Dat ziet er in Python code zo uit:
+\begin{lstlisting}[language=python]
+chars = [ 'a', 'A', '1', 'B', 'b', '2' ]
+for char in chars:
+    if char.islower():
+        print(f"{char} is lowercase")
+    elif char.isupper():
+        print(f"{char} is uppercase")
+    elif char.isnumeric():
+        print(f"{char} is numeric")
+\end{lstlisting}
+
+Extra informatie over uppercase, lowercase en numeric detectie:
+\begin{itemize}
+	\item \url{https://www.w3schools.com/python/pythn\_ref\_string.asp}
+	\item \url{https://docs.python.org/3/library/stdtypes.html#string-methods}
+\end{itemize}
 
