@@ -1,0 +1,65 @@
+\documentclass[a4paper,12pt,twoside,openright,titlepage]{article}
+
+%Additional packages
+\input{styles/packages}
+
+% Listing style
+\input{styles/lstset}
+
+% Uncomment for production
+% \syntaxonly
+
+% Style
+\pagestyle{headings}
+
+% Define document
+\author{D. Leeuw}
+\title{Python: For/While werkboek}
+\date{\today\\
+1.0.0\\
+\vfill
+\raggedright
+\copyright\ 2025 Dennis Leeuw\\
+\input{styles/licentie-titlepage}}
+
+
+\begin{document}
+\selectlanguage{dutch}
+
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%
+%%% Introductie %%%
+%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%
+%%% De inhoud %%%
+%%%%%%%%%%%%%%%%%
+
+\section{Vragen}
+\input{src/vragen-forwhile}
+
+% For opdrachten
+\section{Ping de servers}
+\input{src/opdracht-for-ping}
+
+% While opdrachten
+\section{Vul de doos}
+\input{src/opdracht-while-doos_gewicht}
+\section{Geef het wachtwoord}
+\input{src/opdracht-while-wachtwoord}
+\section{Toetscijfers}
+\input{src/opdracht-while-toetsen}
+
+% Mix
+\section{Herstel de code}
+\input{src/opdracht-forwhile-while2for}
+
+%%%%%%%%%%%%%%%%%%%%%
+%%% Index and End %%%
+%%%%%%%%%%%%%%%%%%%%%
+%\backmatter
+\printindex
+\end{document}
+
+%%% Last line %%%
