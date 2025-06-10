@@ -1,0 +1,66 @@
+\documentclass[a4paper,12pt,twoside,openright,titlepage]{article}
+
+%Additional packages
+\input{styles/packages}
+
+% Listing style
+\input{styles/lstset}
+
+% Uncomment for production
+% \syntaxonly
+
+% Style
+\pagestyle{headings}
+
+% Define document
+\author{D. Leeuw}
+\title{Extending Python (Modules)}
+\date{\today\\
+\vfill
+\raggedright
+\copyright\ 2025 Dennis Leeuw\\
+\input{styles/licentie-titlepage}}
+
+
+\begin{document}
+\selectlanguage{dutch}
+
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%
+%%% Introductie %%%
+%%%%%%%%%%%%%%%%%%%
+
+%B% \frontmatter
+\section{Over dit Document}
+\subsection{Leerdoelen}
+\input{src/leerdoelen-pip}
+\subsection{Voorkennis}
+\input{src/voorkennis-pip}
+
+%%%%%%%%%%%%%%%%%
+%%% De inhoud %%%
+%%%%%%%%%%%%%%%%%
+%%% \tableofcontents
+
+%B% \mainmatter
+
+\section{Python code}
+\input{src/rewritten_code.tex}
+
+\section{Het maken van een module}
+\input{src/import-splitsing.tex}
+
+\section{Modules van anderen}
+\input{src/libraries}
+\subsection{pip}
+\input{src/pip}
+
+%%%%%%%%%%%%%%%%%%%%%
+%%% Index and End %%%
+%%%%%%%%%%%%%%%%%%%%%
+%\backmatter
+\printindex
+\end{document}
+
+%%% Last line %%%

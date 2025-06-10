@@ -1,0 +1,40 @@
+Deze opdracht bestaat uit twee stukken. Bij een nieuw systeem willen we weten wat er in het systeem zit en wat het IP adres van de machine is. Gedurende het gebruik willen we weten hoeveel RAM er gebruikt wordt en wat de belasting van de CPU is. Voor beide taken willen we een script schrijven.
+
+\begin{enumerate}
+\item Systeemrapport genereren (informatie)
+	\begin{description}
+	\item[Doel] Functies combineren en rapporteren.
+	\item[Opdracht] Maak een functie \textquote{genereer\_systeemrapport()} die:
+		\begin{itemize}
+		\item de hoeveelheid RAM laat zien,
+		\item de CPU-info toont,
+		\item het IP-adres weergeeft.
+		\end{itemize}
+	\item[Tip] Gebruik modules zoals \textquote{psutil} en \textquote{socket}
+	\item[Voorbeeldoutput] De output zou er zo uit kunnen zien:
+\begin{lstlisting}[language=python]
+Systeemrapport:
+RAM: 8 GB
+CPU: Intel Core i5
+IP-adres: 192.168.1.101
+\end{lstlisting}
+	\end{description}
+
+\item Systeemrapport genereren (monitoring)
+	\begin{description}
+	\item[Doel] Actuele informatie opvragen met een functie
+	\item[Opdracht] Maak een functie \textquote{genereer\_systeemrapport()} die:
+		\begin{itemize}
+		\item de hoeveelheid vrij beschikbare RAM laat zien,
+		\item de huidige CPU-frequentie toont.
+		\end{itemize}
+	\item[Tip] Gebruik module \textquote{psutil}
+	\item[Voorbeeldoutput] De output zou er zo uit kunnen zien:
+\begin{lstlisting}[language=python]
+Systeemrapport:
+RAM beschikbaar: 6 GB
+CPU frequentie: 2,56 MHz
+\end{lstlisting}
+	\end{description}
+\end{enumerate}
+
