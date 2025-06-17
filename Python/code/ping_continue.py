@@ -3,12 +3,13 @@ import platform
 
 # Netwerk address
 netaddr = "192.168.22"
+ping_param = ''
 
 # Check hoe we ping moeten aanspreken
 if platform.system().lower() == 'windows':
-    param = '-n'
+    ping_param += '-n'
 else:
-    param = '-c'
+    ping_param += '-c'
 
 # Loop door de IP adressen 1 t/m 10 van ons netwerk
 for addr in range(1,11):
@@ -16,5 +17,5 @@ for addr in range(1,11):
         continue
     ip_addr = netaddr + "." + str(addr)
 
-    response = os.system(f"ping " + param + "1 " + ip_addr)
+    response = os.system(f"ping " + ping_param + "1 " + ip_addr)
 
