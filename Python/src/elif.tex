@@ -1,0 +1,16 @@
+Bij het maken van een keuze hebben we nu gezien hoe we een keuze maken met \texttt{if}, wat we kunnen doen in alle ander gevallen met \texttt{else}, blijft er alleen nog over hoe we een tweede keuze kunnen maken. Binnen Python is er voor die laatse het \index{elif}\texttt{elif}-statement.
+\begin{lstlisting}[language=python]
+if a < 5:
+    a += 1
+elif a > 5:
+    a += 2
+else:
+    a += 3
+print(a)
+\end{lstlisting}
+Het gevolg van deze code is dat als \texttt{a} kleiner is dan 5 er 1 wordt opgeteld bij \texttt{a}, als \texttt{a} groter is dan 5 dan wordt er 2 opgeteld bij \texttt{a} en in alle andere gevallen (als \texttt{a} dus 5 is) dan wordt er 3 bij \texttt{a} opgeteld.
+
+De \texttt{elif} mogen we een oneindig aantal keer herhalen, zodat we steeds een andere keuze kunnen maken. Om de code efficient te houden is het minimaliseren van het aantal keuzes aan te raden.
+
+Ook het documenteren\index{documenteren} van code is belangrijk. Je hoeft daarbij niet uit te leggen wat de \texttt{if} constructie doet, je mag ervan uitgaan dat iemand dat kan lezen, maar het is wel belangrijk om het waarom van de keuze uit te leggen. Beantwoord in je uitleg de vraag wat betekent het voor de rest van het programma als de \texttt{if}, \texttt{elif} of de \texttt{else} doorlopen wordt.
+

@@ -1,0 +1,38 @@
+Met logische operators\index{logische operators} (logical operators\index{logical operator}) kunnen we twee condities tegelijk testen. Bij deze test is het geheel waar (True) of niet-waar (False). In de tabel \ref{table:logicop} vind je een overzicht van hoe om te gaan met logical operators.
+\begin{flushleft}
+\begin{table}[h!]
+\centering
+\begin{tabularx}{\textwidth}{ |c|X|c| }
+\hline
+	Operator &
+	Betekenis &
+	Hoe te gebruiken \\
+\hline
+	and\index{and}\index{operator!and} &
+	Als beide condities waar zijn, dan is het hele statement waar (True) &
+	x \textless 5 and y == 10 \\
+\hline
+	or\index{or}\index{operator!or} &
+	Als \'e\'en van de condities waar is, dan is het hele statement waar (True) &
+	x \textless 5 or y == 10 \\
+\hline
+\end{tabularx}
+\caption{Logical operators}
+\label{table:logicop}
+\end{table}
+\end{flushleft}
+
+Met logische operator \texttt{not}\index{not}\index{operator!not} kunnen we een False conditie True maken of een True conditie False.
+\begin{lstlisting}[language=python]
+not(a == 5)
+\end{lstlisting}
+is dus hetzelfde als
+\begin{lstlisting}[language=python]
+a != 5
+\end{lstlisting}
+In combinatie met de \texttt{and} en de \texttt{or} wordt het dan:
+\begin{lstlisting}[language=python]
+not(x < 5 and y == 10)
+\end{lstlisting}
+Deze code betekent dat als \texttt{x} kleiner is dan 5 en \texttt{y} is 10 dan is de uitkomst \textbf{False}.
+

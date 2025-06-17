@@ -1,0 +1,43 @@
+Om de computer een keuze te laten maken gebruiken we het key-woord \texttt{if}\index{if}. Bijvoorbeeld:
+\begin{lstlisting}[language=python]
+if a < 5:
+    a += 1
+\end{lstlisting}
+Hier staat: \textquote{als a kleiner is dan 5 tel dan 1 op bij a}. In alle andere gevallen doet de computer niets. We hebben de computer dus een simpele berekening laten uitvoeren op basis van de conditie of \texttt{a} kleiner dan 5 is. \texttt{a < 5} is de conditie. \texttt{if} geeft aan dat er een conditie komt. \texttt{:} zegt dat als de condite waar is dat dan de inspringende code uitgevoerd moet worden.
+
+De conditie kent twee waarden: True\index{True} en False\index{False}. Let op binnen Python worden beide met de eerste letter als hoofdletter geschreven. We kunnen dan ook code maken met een True:
+\begin{lstlisting}[language=python]
+if True:
+    a += 1
+\end{lstlisting}
+Deze \texttt{if}-conditie is altijd waar en dus zal altijd de \texttt{a} plus 1 uitgevoerd worden. Zinloze code dus, maar het laat wel zien dat een conditie waar of onwaar moet zijn.
+
+De afspraak (syntax\index{syntax}) binnen Python is dat code met spaties moet inspringen\index{inspringen} na een conditie. Alle inspringende code behoort bij de uit te voeren code (code block\index{code block} na de \texttt{if}. Als het inspringen stopt gaat Python ervan uit dat het \texttt{if}-statement voorbij is. De keuze voor het aantal spaties is geheel naar de keuze van de programmeur, hoewel er veel gebruik wordt gemaakt van 4 spaties. Ook wij zullen deze ongeschreven regel volgen en altijd 4 spaties gebruiken bij het inspringen.
+\begin{lstlisting}[language=python]
+if a < 5:
+    a += 1
+print(a)
+\end{lstlisting}
+Het \texttt{print} commando wordt niet meer ingesprongen en behoort dus niet bij de \texttt{if}. De \texttt{print} wordt dus altijd uitgevoerd, ook als \texttt{a} groter is dan 5.
+
+Elke verandering van het inspringen betekent voor Python dat er een nieuw code block begint. Een code block moet dan ook altijd met dezelfde hoeveelheid spaties inspringen.
+\begin{lstlisting}[language=python]
+if a < 5:
+    a += 1
+    print(a)
+\end{lstlisting}
+Zowel de regel met het 1 optellen bij \texttt{a} als de regel met het print-statement springen beide 4 spaties in en horen dus bij elkaar, ze vormen hetzelfde code block.
+
+Als we code laten inspringen zonder dat er een statement is of we springen binnen een code block in met een ongelijk aantal spaties dan krijgen we een syntax-error van Python. Deze code:
+\begin{lstlisting}[language=python]
+a = 1
+b = 2
+   c =  a+b
+print(c)
+\end{lstlisting}
+geeft bij het uitvoeren deze error:
+\begin{lstlisting}[language=python]
+IndentationError: unexpected indent
+\end{lstlisting}
+Er is dus een \textquote{identation}\index{identation} fout, indentation is het Engelse woord voor inspringen. Deze error is een syntax error, omdat hij tegen de afspraken (syntax) van Python in gaat.
+

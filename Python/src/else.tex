@@ -1,0 +1,13 @@
+Bij het \texttt{if}-statement hebben we gezien dat als er niet meer wordt ingesprongen dat het statement dan afgelopen is en dat de normale loop van het programma verder gaat. Het zou kunnen gebeuren dat we bij een conditie iets willen doen en in alle andere gevallen iets anders willen doen. We krijgen dan een als X doe iets, anders doe iets anders. In programmeerland noemen we dat \texttt{if} X doe iets, \texttt{else}\index{else} doe iets anders:
+\begin{lstlisting}[language=python]
+if a < 5:
+    a += 1
+else:
+    a += 2
+    print(a)
+exit()
+\end{lstlisting}
+Dus als \texttt{a} kleiner is dan 5 dan tellen we 1 op bij \texttt{a} in alle andere gevallen tellen we 2 op bij \texttt{a} en printen we de waarde van \texttt{a} op het scherm.
+
+Ook na de \texttt{else} wordt er ingesprongen. In dit geval behoren dus de \texttt{a += 2} en de \texttt{print(a)} bij de code die uitgevoerd wordt na de \texttt{else}. De \texttt{exit()} behoort niet bij de \texttt{if}, niet bij de \texttt{else}, maar is onderdeel van de normale loop van het programma en wordt dus altijd uitgevoerd.
+
