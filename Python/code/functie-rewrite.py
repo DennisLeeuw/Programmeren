@@ -2,8 +2,12 @@ lst_netwerk = []
 
 print("We vragen om 3 IP-adressen die in uw netwerk voorkomen")
 
-ip = input("Wat is IP-adres 1 in het netwerk? ")
-lst_netwerk.append(ip)
+while True:
+    ip = input("Wat is IP-adres 1 in het netwerk? ")
+    if ip not in lst_netwerk:
+        lst_netwerk.append(ip)
+        break
+    print(f"IP-adres {ip} komt al in de lijst voor")
 
 while True:
     ip = input("Wat is IP-adres 2 in het netwerk? ")
