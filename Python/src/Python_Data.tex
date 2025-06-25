@@ -1,0 +1,74 @@
+\documentclass[a4paper,12pt,twoside,titlepage]{article}
+
+%Additional packages
+\input{styles/packages}
+
+% Listing style
+\input{styles/lstset}
+
+% Uncomment for production
+% \syntaxonly
+
+% Style
+\pagestyle{headings}
+
+% Define document
+\author{D. Leeuw}
+\title{Python: Werken met data}
+\date{\today\\
+0.0.0\\
+\vfill
+\raggedright
+\copyright\ 2025 Dennis Leeuw\\
+\input{styles/licentie-titlepage}}
+
+
+\begin{document}
+\selectlanguage{dutch}
+
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%
+%%% Introductie %%%
+%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%
+%%% De inhoud %%%
+%%%%%%%%%%%%%%%%%
+
+\section{Variabelen}
+\input{src/variabelen}
+\input{src/variabelen_assignments}
+\input{src/variabelen_print}
+
+\section{Data Types}
+\input{src/data_types}
+\input{src/quoting}
+\subsection{Casting}
+\input{src/casting}
+
+%\subsection{boolean}
+
+\section{Arithmetic operators}
+\input{src/operators-arithmetic}
+
+\section{Ordenen van data}
+\input{src/data_ordenen}
+\subsection{list (array)}
+\input{src/list}
+\subsection{list manipulatie}
+\input{src/list_range}
+\subsection{tuple}
+\input{src/tuple}
+\subsection{Dictionaries (Key/Value pairs)}
+\input{src/dictionary}
+\subsection{set, frozenset}
+
+%%%%%%%%%%%%%%%%%%%%%
+%%% Index and End %%%
+%%%%%%%%%%%%%%%%%%%%%
+%\backmatter
+\printindex
+\end{document}
+
+%%% Last line %%%

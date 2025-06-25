@@ -1,0 +1,26 @@
+Een dictionary\index{dictionary} is een lijst met key/value pairs. In andere programmeertalen komen je ook weleens de term named list\index{named list} tegen. Dictionaries worden gemaakt met accolades. De key/value paren worden gescheiden van elkaar met komma's, en de key wordt van de value gescheiden door een dubbele punt. Een dictionary zit er dan zo uit:
+\begin{lstlisting}[language=python]
+myDictionary = {
+	"Voornaam": "Jan",
+	"Achternaam":  "Jansen",
+	"Adres": "Dorpsstraat",
+	"Huisnummer": 6,
+	"Postcode": "9999 AA",
+	"Plaats": "Nergenshuizen"
+}
+\end{lstlisting}
+Dubbele elementen mogen niet voorkomen, een element dat later in de dictionary staat overschrijft zal een eerdere overschrijven. Hieruit volgt meteen dat data in een dictionary overschreven kan worden, en dus zijn dictionaries niet \textquote{unmutable}.
+
+Elementen in een dictionary worden aangesproken bij hun naam, bijvoorbeeld:
+\begin{lstlisting}[language=python]
+myDictionary = {
+	"Voornaam": "Jan",
+	"Achternaam":  "Jansen",
+	"Adres": "Dorpsstraat",
+	"Huisnummer": 6,
+	"Postcode": "9999 AA",
+	"Plaats": "Nergenshuizen"
+}
+print(myDictionary["Huisnummer"])
+\end{lstlisting}
+

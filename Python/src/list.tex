@@ -1,0 +1,46 @@
+Een list\index{list} of zoals het in andere programmeertalen wel wordt genoemd een array\index{array} is een lijst van waarden die aan \'e\'en variable is toegekend. Voorbeeld:
+\begin{lstlisting}[language=python]
+fruit = ["appel", "peer", "banaan", "sinaasappel"]
+print(fruit)
+\end{lstlisting}
+Een list wordt gedefinieerd door de blockhaken met daartussen de waarden die er in de list zitten gescheiden door komma's.
+
+We kunnen in Python verschillende variabelen vullen door er een lijst met waarden aan te geven. Dan kunnen we ook doen met een list:
+\begin{lstlisting}[language=python]
+fruit = ["appel", "peer", "banaan", "sinaasappel"]
+n, m, o, p = fruit
+print(n)
+print(m)
+print(o)
+print(p)
+\end{lstlisting}
+
+Een list is een ge\"indexeerde lijst. Het eerste item staat op plek 0, het tweede op plek 1, etc. Met print kan je dat ook zien:
+\begin{lstlisting}[language=python]
+fruit = ["appel", "peer", "banaan", "sinaasappel"]
+print(fruit[0])
+print(fruit[2])
+\end{lstlisting}
+Een index mag ook negatief zijn, dan is -1 het laatste element van de lijst en -2 de voorlaatste.
+\begin{lstlisting}[language=python]
+fruit = ["appel", "peer", "banaan", "sinaasappel"]
+print(fruit[-1])
+print(fruit[-3])
+\end{lstlisting}
+
+Omdat een list een ge\"indexeerde lijst is kunnen er ook dubbele waarden voor komen:
+\begin{lstlisting}[language=python]
+fruit = ["appel", "peer", "banaan", "sinaasappel", "banaan"]
+print(fruit)
+\end{lstlisting}
+We kunnen op basis van de index ook een waarde wijzigen:
+\begin{lstlisting}[language=python]
+fruit = ["appel", "peer", "banaan", "sinaasappel", "banaan"]
+print(fruit)
+fruit[2] = "kiwi"
+print(fruit)
+\end{lstlisting}
+De eerste banaan in de lijst is nu een kiwi geworden.
+
+Samengevat is een list dus geordend, staat hij duplicaten toe en kunnen de elementen gewijzigd worden.
+

@@ -1,0 +1,27 @@
+Soms wil je dat data van een specifiek type is. Je zou bijvoorbeeld een getal willen kunnen behandelen als een string of een string als een getal. Om het ene data type om te zetten in het andere moeten we de data \textquote{casten}\index{cast}. Casting is het omzetten van het ene type data in het andere.
+
+Een string omzetten in een getal doen we zo:
+\begin{lstlisting}[language=python]
+a = "56"
+x = int(a)
+print(type(a))
+print(type(x))
+\end{lstlisting}
+Een getal omzetten naar een string met:
+\begin{lstlisting}[language=python]
+a = 56
+x = str(a)
+print(type(a))
+print(type(x))
+\end{lstlisting}
+
+We zien dat we functies/ commando's hebben die de omzetting doen. \texttt{int} zet een data type om naar een integer, als dat mogelijk is. Als we proberen om een karakter om te zetten naar een \texttt{int} dan krijgen we een error melding:
+\begin{lstlisting}[language=python]
+>>> a = "a"
+>>> print(int(a))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: invalid literal for int() with base 10: 'a'
+\end{lstlisting}
+De \texttt{ValueError} geeft aan dat een letter a niet omgezet kan worden naar een integer.
+

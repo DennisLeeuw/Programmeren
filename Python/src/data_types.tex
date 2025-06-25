@@ -1,0 +1,18 @@
+Data moet opgeslagen worden in het geheugen van de computer om ermee te kunnen werken. We weten dat het computergeheugen werkt met 1-en en 0-en. Wij werken meestal met tekst of getallen, onze data moet dus vertaald worden naar 1-en en 0-en.om opgeslagen te kunnen worden. Om een 2 op te slaan in het geheugen zouden we direct een binair getal kunnen nemen: 0000 0010, maar hoe zit dat dan met -2 of met 2,0? En ook hoe gaan we om met tekst en leestekens? De kunst is om zo effcient mogelijk met het geheugen om te gaan zodat er zoveel mogelijk data in zo min mogelijk geheugen past.
+Om deze efficientie te bereiken is het handig als een programmeertaal van te voren weet wat voor \textquote{waarde} het moet opslaan in het geheugen. Bij veel programmeertalen moet je van te voren opgeven wat voor soort waarde je wilt opslaan. In Python hoef je dat niet meteen aan te geven. Python raad wat je bedoelt.
+Python kent o.a. de volgende data typen:
+\begin{description}
+\item[int] integer - Een positief of negatief heel getal
+\item[float] Een getal met een komma, niet gehele getallen
+%\item[char] character - Een karakter en ook de leestekens horen hierbij
+\item[str] string - Een reeks van karakters (chars). Een karakter kan een letter, leesteken of cijfer zijn
+\item[complex] Imaginaire getallen (5j)
+\end{description}
+Als je in Python de volgende variabelen maakt:
+\begin{lstlisting}[language=python]
+x = 5
+y = "Hello World!"
+z = 6.3
+\end{lstlisting}
+Dan zal Python van \texttt{x} een \textbf{int} maken, van \texttt{y} een \textbf{str} en van \texttt{z} een \textbf{float}.
+

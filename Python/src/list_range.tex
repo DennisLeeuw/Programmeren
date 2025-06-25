@@ -1,0 +1,51 @@
+Op basis van de index kan je ook een deel (range) van een lijst selecteren.
+\begin{lstlisting}[language=python]
+fruit = ["appel", "peer", "banaan", "sinaasappel", "kiwi"]
+print(fruit[1:3])
+\end{lstlisting}
+Let op dat de range 1 tot 3 is, dus niet 1 tot en met 3. Je krijgt de elementen terug op posities 1 en 2.
+
+Je kan ook een stuk vanaf het begin selecteren
+\begin{lstlisting}[language=python]
+fruit = ["appel", "peer", "banaan", "sinaasappel", "kiwi"]
+print(fruit[:3])
+\end{lstlisting}
+Dit is dus van index 0 tot index 3.
+
+Vanaf het einde mag ook, of beter van een positie tot het einde:
+\begin{lstlisting}[language=python]
+fruit = ["appel", "peer", "banaan", "sinaasappel", "kiwi"]
+print(fruit[1:])
+\end{lstlisting}
+
+Met deze selecties kan je ook waarden wijzigen:
+\begin{lstlisting}[language=python]
+fruit = ["appel", "peer", "banaan", "sinaasappel", "kiwi"]
+fruit[1:4] = [ "mango", "ananas", "papaya" ]
+print(fruit)
+\end{lstlisting}
+De elementen op index 1 tot en met 3 worden overschreven met hun nieuwe waarde.
+
+Als je meer elementen opgeeft als vervanging dan de opgegeven range groot is dan worden de extra elementen ingevoegd:
+\begin{lstlisting}[language=python]
+fruit = ["appel", "peer", "banaan", "sinaasappel", "kiwi"]
+fruit[1:1] = [ "mango", "ananas", "papaya" ]
+print(fruit)
+\end{lstlisting}
+We selecteren een range van geen elementen (van 1 tot 1), we kiezen dus alleen de positie van het eerste element en voegen dan 3 nieuwe elementen in.
+
+Je kan een list ook korter maken:
+\begin{lstlisting}[language=python]
+fruit = ["appel", "peer", "banaan", "sinaasappel", "kiwi"]
+fruit[1:4] = [ "mango" ]
+print(fruit)
+\end{lstlisting}
+Alle elementen op index 1 tot en met 3 worden vervangen door 1 nieuw element.
+
+Of \'e\`en of meer elementen verwijderen door hun waarde leeg te maken:
+\begin{lstlisting}[language=python]
+fruit = ["appel", "peer", "banaan", "sinaasappel", "kiwi"]
+fruit[1:3] = ''
+print(fruit)
+\end{lstlisting}
+

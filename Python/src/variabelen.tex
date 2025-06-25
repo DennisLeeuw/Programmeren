@@ -1,0 +1,27 @@
+Een computer slaat data op in het geheugen. Dit gebeurt door een bepaald adres in het geheugen te selecteren en daar de 1-en en 0-en die onze data vertegenwoordigen weg te schrijven. Wij als programmeurs hebben echter geen idee op welke plek (welk adres) onze data weggeschreven wordt. Dat wordt bepaald door het besturingssysteem, dus hebben we een andere manier nodig om te verwijzen naar onze data. We gebruiken variabelen\index{variabelen} (variables\index{variables}) om onze data in op te slaan. De naam \textquote{variabelen} zegt al dat we de data ook kunnen wijzigen, dit in tegenstelling tot constanten\index{constanten} (constants\index{constants}) die een vaste niet wijzigbare data hebben.
+
+Het geven van een waarde aan een variabele is in Python heel simpel:
+\begin{lstlisting}[language=python]
+x = 5
+\end{lstlisting}
+We gebruiken het = teken om aan Python te vertellen dat de variabele \texttt{x} de waarde \textbf{5} krijgt. Hierna kunnen we in onze code \texttt{x} gebruiken en zal daarvoor in de plaats \textbf{5} worden weergegeven:
+\begin{lstlisting}[language=python]
+x = 5
+print(x)
+\end{lstlisting}
+Zo kunnen we ook onze \texttt{print} opdracht van de \textquote{Hello World!} aanpassen:
+\begin{lstlisting}[language=python]
+msg = "Hello World!"
+print(msg)
+\end{lstlisting}
+
+Een variabele is hoofdlettergevoelig (case sensitive), een variabele met de naam a en met de naam A zijn twee verschillende variabelen. Voor het maken van namen van variabelen zijn er in Python een aantal regels:
+\begin{itemize}
+	\item Een variabele naam moet beginnen met een letter of een underscore, hij mag dus niet beginnen met een cijfer
+	\item Een variabele naam mag alleen letters, cijfers en underscores bevatten
+	\item Variabele namen zijn case sensitief (Fruit, fruit en FRUIT zijn drie verschillende variabelen)
+	\item Een variabele mag geen Python keyword zijn. Zie W3Schools voor een lijst met Python keywords (\url{https://www.w3schools.com/python/python_ref_keywords.asp}
+\end{itemize}
+
+Een goed gekozen variabele naam kan je in de toekomst helpen bij het herlezen van je code. Een variabele naam als \texttt{x} zegt niets, de naam \texttt{msg} (een afkorting voor message) is al een stuk duidelijker. Soms is het handig om een variabele een naam te geven die bestaat uit meer dan \'e\'en woord. Volgens de bovenstaande regels mag een spatie niet voorkomen in een variabele naam en \texttt{paswoordvandegebruiker} is niet lekker leesbaar. Omdat variabelen hoofdlettergevoelig zijn zou een mogelijke oplossing voor de leesbaarheid kunnen zijn \texttt{PaswoordVanDeGebruiker}, of wat ook mag \texttt{paswoord\_van\_de\_gebruiker} of een combinatie. Wat je ook tegenkomt is de variant van de eerste optie maar waarbij het eerste woord niet met een hoofdletter geschreven is \texttt{paswoordVanDeGebruiker}. Kortom er zijn verschillende mogelijkheden te verzinnen om de leesbaarheid te vergroten. Als je binnen een script een variant kiest, gebruikt deze variant door over al in je script en ga geen varianten door elkaar gebruiken. Dat komt de leesbaarheid niet te goede.
+
