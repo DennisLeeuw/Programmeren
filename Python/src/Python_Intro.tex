@@ -1,0 +1,68 @@
+\documentclass[a4paper,12pt,twoside,titlepage]{article}
+
+%Additional packages
+\input{styles/packages}
+
+% Listing style
+\input{styles/lstset}
+
+% Uncomment for production
+% \syntaxonly
+
+% Style
+\pagestyle{headings}
+
+% Define document
+\author{D. Leeuw}
+\title{Python}
+\date{\today\\
+0.0.0
+\vfill
+\raggedright
+\copyright\ 2025 Dennis Leeuw\\
+\input{styles/licentie-titlepage}}
+
+
+\begin{document}
+\selectlanguage{dutch}
+
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%
+%%% Introductie %%%
+%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%
+%%% De inhoud %%%
+%%%%%%%%%%%%%%%%%
+
+% requires: 
+% provides: programmeren, python
+\section{Wat is Python?}
+\input{src/programmeren}
+\subsection{Opdrachten}
+\input{src/opdrachten-what_is_python}
+
+\section{Installatie van de Python-interpreter}
+\subsection{Windows}
+\input{src/python_windows_installatie}
+
+\section{Hello World!}
+\input{src/helloworld}
+
+\section{IDE}
+\input{src/ide}
+\subsection{Windows: Visual Studio Code}
+\input{src/visual_studio_code-windows-install}
+\subsection{Linux: Visual Studio Code}
+\input{src/visual_studio_code-linux-install}
+%\subsection{PyCharm}
+%\input{src/pycharm}
+
+%%%%%%%%%%%%%%%%%%%%%
+%%% Index and End %%%
+%%%%%%%%%%%%%%%%%%%%%
+\printindex
+\end{document}
+
+%%% Last line %%%

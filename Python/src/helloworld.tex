@@ -1,0 +1,21 @@
+De meeste programmeertalen beginnen bij hun uitleg over de taal met het op het scherm printen van de tekst \textquote{Hello World!}, laten wij voor deze Python lessen daar ook maar mee beginnen. Python maakt gebruik van een interpreter en dus kunnen we de interpreter opstarten en daar het commando intypen. Start Python op door op de command line \texttt{python} te typen en enter te geven.
+\begin{lstlisting}[language=python]
+Python 3.11.2 (main, Apr 28 2025, 14:11:48) [GCC 12.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> print("Hello World!")
+Hello World!
+>>> exit()
+\end{lstlisting}
+De \textgreater\textgreater\textgreater geeft aan dat je op de Python prompt zit. Na deze drie groter dan tekens mag je python code intypen. In ons geval bestaat de opdracht aan Python uit het commando \texttt{print()} met tussen quotes de tekst die we op het scherm afgebeeld willen zien. Na de enter zal Python direct de tekst laten zien. Met het commando \texttt{exit()} verlaten we de interpreter.
+
+We kunnen ook een tekstbestand maken in onze editor met daarin het commando:
+\begin{lstlisting}[language=python]
+print("Hello World!")
+\end{lstlisting}
+Als we dit document opslaan met een \texttt{.py} extensie, bijvoorbeeld als \texttt{hello.py} dan kunnen we dit script door python laten uitvoeren door het script als argument mee te geven aan \texttt{python}:
+\begin{lstlisting}[language=python]
+python hello.py
+\end{lstlisting}
+
+Het uitvoeren van commando's direct in de interpreter is makkelijk om zaken te testen, maar om dingen ook voor de toekomst veilig te stellen is het beter om scripts te gebruiken zodat scripts die je een keer gemaakt hebt ook later weer kunt gebruiken.
+
