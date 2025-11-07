@@ -1,0 +1,52 @@
+FastAPI is een Python implementatie van een REST server. Het geeft je de mogelijkheid om snel en simpel je eigen REST server te bouwen.
+
+\begin{lstlisting}[language=bash]
+pip install "fastapi[standard]"
+\end{lstlisting}
+Voor meer informatie over FastAPI kan je terecht op \url{https://fastapi.tiangolo.com/}.
+
+\texttt{pip} plaatst FastAPI in een eigen directory. Deze directory is standaard niet toegevoegd aan je PATH en dus kan je \texttt{fastapi} alleen opstarten door het hele pad op te geven. Dat is niet handig dus gaan we het pad toevoegen aan onze PATH variabele in ons PowerShell profile:
+\begin{lstlisting}[language=bash]
+notepad.exe .\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1 
+\end{lstlisting}
+
+Voeg een regel toe met het pad dat je hebt gekregen van \texttt{pip} (jouw pad zal anders zijn dan in het gegeven voorbeeld)
+\begin{lstlisting}[language=bash]
+$env:PATH += "C:\Users\dleeu\AppData\...\local-packages\Python313\Scripts"
+\end{lstlisting}
+Elke keer als je hierna PowerShell opstart zal dit pad worden toegevoegd PATH zodat de \texttt{fastapi}-server gevonden wordt. Je kan dit testen door een tweede console voor PowerShell te openen en in te typen:
+\begin{lstlisting}[language=bash]
+$env.PATH
+\end{lstlisting}
+
+Een webserver heeft natuurlijk een start-pagina nodig en die gaan we maken in Python. Maak een nieuw tekstbestand met de naam \texttt{main.py} en zet daarin:
+\begin{lstlisting}]language=python]
+from typing import Union
+
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+def read_root():
+    return {"Hello": "World"}
+
+@app.get("/items/{item_id}")
+def read_item(item_id: int, q: Union[str, None] = None):
+    return {"item_id": item_id, "q": q}
+\end{lstlisting}
+
+Nu kunnen we de server opstarten:
+\begin{lstlisting}]language=bash]
+fastapi dev main.py
+\end{lstlisting}
+
+Dit zou een overzicht zoals dit op moeten leveren:
+
+\begin{minipage}[t]{\linewidth}
+\raggedright
+\adjustbox{valign=t}{%
+	\includegraphics[width=0.99\linewidth]{FastAPI.png}%
+}
+\end{minipage}
+

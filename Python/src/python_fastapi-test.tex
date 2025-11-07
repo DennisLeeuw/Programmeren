@@ -1,0 +1,29 @@
+De \texttt{main.py} code luistert op de web-interface naar \textquote{\slash} en naar \textquote{\slash items\slash itemID}. Dit is dus zoals we de server kunnen aanroepen.
+
+De meest simpele test die we kunnen doen is onze web-browser openen en in de adresbalk \url{http://127.0.0.1:8000/} invoeren. We benaderen dan de FastAPI server met de vraag om het \texttt{/} pad op te voeren. Als alles goed gegaan is dan zal de server antwoorden met:
+\begin{lstlisting}[language=bash]
+{"Hello": "World"}
+\end{lstlisting}
+
+Windows 10 en 11 hebben standaard \texttt{curl} ge\"installeerd staan. cURL is een commandline tool om tegen web-servers te praten zonder alle overhead van een web-browser. Het is de tool voor de systeembeheerder, ontwikkelaar om REST-API's te testen. Meer informatie over \texttt{curl} kan je vinden op \url{https://curl.se/}. Wij beginnen met een simpele test in PowerShell:
+\begin{lstlisting}[language=bash]
+curl.exe -X GET http://127.0.0.1:8000/
+\end{lstlisting}
+Vergeet de \texttt{.exe} niet anders praat je tegen de cmdlet \texttt{Invoke-WebRequest} inplaats van tegen de echte \texttt{curl} en dat levert hele andere resultaten op als we echt de opties van \texttt{curl} gaan gebruiken.
+
+De optie \texttt{-X} geeft ons de mogelijkheid om aan \texttt{curl} te vertellen met welke method er tegen de webserver gepraat moet worden, in dit geval gebruiken we het \texttt{GET} method.
+
+Als we dit op een tweede PowerShell console uitvoeren dan krijgen we hetzelfde antwoord als wat we in onze web-browser al gekregen hebben.
+
+We kunnen met \texttt{curl} ook de tweede mogelijkheid van onze \texttt{main.py} opvragen:
+\begin{lstlisting}[language=bash]
+curl.exe -X GET http://127.0.0.1:8000/items/5?q=somequery
+\end{lstlisting}
+Dit zou hetvolgende antwoord moeten opleveren:
+\begin{lstlisting}[language=bash]
+{"item_id": 5, "q": "somequery"}
+\end{lstlisting}
+We zien dat we een JSON list terug krijgen met het item\_id en de query die we hebben opgegeven.
+
+Met \keys{CTRL + C} kunnen we de REST-API server stoppen.
+
