@@ -1,0 +1,27 @@
+Gebruik \texttt{Putty} of \texttt{telnet} voor de volgende tests, denk om de extra lege regel na elk commando:
+
+\begin{enumerate}
+\item
+\begin{lstlisting}[language=bash]
+GET / HTTP/1.1
+
+\end{lstlisting}
+
+\item
+\begin{lstlisting}[language=bash]
+GET /ditbestaatniet HTTP/1.1
+
+\end{lstlisting}
+
+\item
+\begin{lstlisting}[language=bash]
+GET / HTTP/1.1
+Host: google.com
+
+\end{lstlisting}
+\end{enumerate}
+
+We zien bij de laatste opdracht dat de webserver niet kijkt naar de Host-header. De Python module voor de webserver is dan ook een simpele server. Maar leuk om wat basis zaken te testen.
+
+Maak in de directory waarin je de webserver hebt gestart een eenvoudige website aan en start je browser op. Type in de tekstbalk \url{http://localhost:8080} en bekijk de headers die gebruikt zijn door de browser en welke er terug zijn gekomen van de server.
+

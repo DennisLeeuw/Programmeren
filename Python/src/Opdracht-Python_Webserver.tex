@@ -1,0 +1,68 @@
+\documentclass[a4paper,12pt,twoside,openright,titlepage]{article}
+
+%Additional packages
+\input{styles/packages}
+
+% Listing style
+\input{styles/lstset}
+
+% Uncomment for production
+% \syntaxonly
+
+% Style
+\pagestyle{headings}
+
+% Define document
+\author{D. Leeuw}
+\title{Opdracht Python Webserver}
+\date{\today\\
+0.1.0 \\
+\vfill
+\raggedright
+\copyright\ 2025 Dennis Leeuw\\
+\input{styles/licentie-titlepage}}
+
+
+\begin{document}
+\selectlanguage{dutch}
+
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%
+%%% Introductie %%%
+%%%%%%%%%%%%%%%%%%%
+
+%B% \frontmatter
+\section{Over dit Document}
+\subsection{Leerdoelen}
+\input{src/P2-K1_script-json-rest}
+\subsection{Voorkennis}
+\input{src/voorkennis-webserver}
+
+% Lessen:
+% - Werken met HTTP 
+%	- enable telnet
+%	- telnet server 80
+% 	- disable telnet
+% - Werken met FastAPI en cURL
+% - CTRL-C om de server te stoppen
+
+%%%%%%%%%%%%%%%%%
+%%% De inhoud %%%
+%%%%%%%%%%%%%%%%%
+
+\section{Een webserver starten}
+\input{src/python-webserver_starten}
+
+\section{Spelen met een webserver}
+\input{src/python-webserver_putty}
+
+
+%%%%%%%%%%%%%%%%%%%%%
+%%% Index and End %%%
+%%%%%%%%%%%%%%%%%%%%%
+%\backmatter
+\printindex
+\end{document}
+
+%%% Last line %%%
