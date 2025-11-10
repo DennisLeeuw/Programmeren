@@ -1,1 +1,16 @@
-Write
+We beginnen met het schrijven van een bestand zodat we iets hebben om mee te werken als we een bestand willen gaan lezen:
+\lstinputlisting[language=python]{code/bestand_write.py}
+Runnen we de code en bekijken we daarna de inhoud van ons nieuwe bestand dan zien we dat het 1 lange regel geworden is en helemaal geen 3 verschillende regels.
+
+Python voegt kennelijk letterlijk de regels toe aan ons bestand zonder rekening te houden met dat wij willen werken met regels. Op de \'e\'en of andere manier zullen we Python dus moeten gaan vertellen dat er een regel einde is. Op Unix (Linux, Mac OS X) systemen is het voldoende om aan te geven dat er een new-line is, op Windows systemen geldt de regel dat er een return + newline moet zijn. Deze extra elementen kunnen we toevoegen in onze code voor een new-line gebruiken we \textbackslash n en voor een return gebruiken we \textbackslash r.
+\lstinputlisting[language=python]{code/bestand_write_nl.py}
+
+We hebben in de voorgaande code gezien dat na elke open er ook een close \textbf{moet} zijn. Het risico bestaat dat als er ergens een fout optreedt en het script crashed dat het dan nooit bij de \texttt{close} gekomen is. Hierbij kan er data verloren gaan. Om dit te voorkomen is er een speciale constructie en dat is de \texttt{with}:
+\begin{lstlisting}[language=python]
+with open('testbestand2.txt', 'wt', encoding="utf-8") as fh:
+    fh.write("We springen in bij het gebruik van with.\r\n")
+    fh.write("Zodra het inspringen over is zal het bestand gesloten worden.\r\n")
+# Rest van de code
+\end{lstlisting}
+Het advies is dan ook om altijd de constructie \texttt{with open(...) as fh:} te gebruiken.
+
