@@ -1,0 +1,76 @@
+\documentclass[a4paper,12pt,twoside,titlepage]{article}
+
+%Additional packages
+\input{styles/packages}
+
+% Listing style
+\input{styles/lstset}
+
+% Uncomment for production
+% \syntaxonly
+
+% Style
+\pagestyle{headings}
+
+% Define document
+\author{D. Leeuw}
+\title{Python: Werken met bestanden en mappen}
+\date{\today\\
+0.0.0
+\vfill
+\raggedright
+\copyright\ 2025 Dennis Leeuw\\
+\input{styles/licentie-titlepage}}
+
+
+\begin{document}
+\selectlanguage{dutch}
+
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%
+%%% Introductie %%%
+%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%
+%%% De inhoud %%%
+%%%%%%%%%%%%%%%%%
+
+\section{Bestanden: Leerdoelen}
+\input{src/python-bestanden_mappen-leerdoelen}
+
+\section{Bestanden: File handles}
+\input{src/python_bestanden}
+\subsection{Schrijven naar een bestand}
+\input{src/python_bestanden_write}
+\subsection{Lezen van een bestand}
+\input{src/python_bestanden_read}
+\subsection{Lezen van regels uit een bestand}
+\input{src/python_bestanden_readline}
+\subsection{Bestanden verwijderen}
+\input{src/python_bestanden_remove}
+
+\section{Bestanden: Opdrachten}
+\subsection{Maken van een notitieblok}
+\input{src/opdracht-notities}
+
+\section{Bestanden en directories}
+\input{src/python_bestanden_path}
+
+%\input{src/python-bestanden-bestanden_directories}
+
+\subsection{Bestanden in mappen}
+%\input{src/python_bestanden_pathlist}
+
+\section{Mappen: Opdrachten}
+\subsection{Analyseer de inhoud van een map}
+\input{src/opdracht-bestanden_mappen}
+
+
+%%%%%%%%%%%%%%%%%%%%%
+%%% Index and End %%%
+%%%%%%%%%%%%%%%%%%%%%
+\printindex
+\end{document}
+
+%%% Last line %%%
