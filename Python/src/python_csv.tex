@@ -1,0 +1,93 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[dutch]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\title{Uitleg over de CSV-module in Python}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{Wat is de csv-module?}
+De \texttt{csv}-module in Python wordt gebruikt om CSV-bestanden (Comma Separated Values) te lezen en te schrijven. 
+Een CSV-bestand is een tekstbestand waarin gegevens in tabellen worden opgeslagen — elke regel is een rij, 
+en kolommen zijn gescheiden door een komma (of ander scheidingsteken zoals \texttt{;} of \texttt{\textbackslash t}).
+
+\subsection*{Voorbeeld van een CSV-bestand}
+\begin{lstlisting}[language={},frame=single]
+naam,leeftijd,stad
+Anna,25,Amsterdam
+Bram,30,Rotterdam
+\end{lstlisting}
+
+\section{CSV-bestanden lezen}
+
+\subsection{Met csv.reader()}
+Leest het bestand regel voor regel en geeft elke rij terug als een lijst:
+\begin{lstlisting}[language=Python,frame=single]
+import csv
+
+with open('personen.csv', newline='', encoding='utf-8') as csvfile:
+    reader = csv.reader(csvfile)
+    for rij in reader:
+        print(rij)
+\end{lstlisting}
+
+\subsection{Met csv.DictReader()}
+Leest het bestand en gebruikt de eerste rij als kolomnamen, 
+waardoor elke rij een dictionary wordt:
+\begin{lstlisting}[language=Python,frame=single]
+import csv
+
+with open('personen.csv', newline='', encoding='utf-8') as csvfile:
+    reader = csv.DictReader(csvfile)
+    for rij in reader:
+        print(rij['naam'], rij['stad'])
+\end{lstlisting}
+
+\section{CSV-bestanden schrijven}
+
+\subsection{Met csv.writer()}
+\begin{lstlisting}[language=Python,frame=single]
+import csv
+
+with open('personen.csv', 'w', newline='', encoding='utf-8') as csvfile:
+    writer = csv.writer(csvfile)
+    writer.writerow(['naam', 'leeftijd', 'stad'])
+    writer.writerow(['Anna', 25, 'Amsterdam'])
+    writer.writerow(['Bram', 30, 'Rotterdam'])
+\end{lstlisting}
+
+\subsection{Met csv.DictWriter()}
+\begin{lstlisting}[language=Python,frame=single]
+import csv
+
+with open('personen.csv', 'w', newline='', encoding='utf-8') as csvfile:
+    veldnamen = ['naam', 'leeftijd', 'stad']
+    writer = csv.DictWriter(csvfile, fieldnames=veldnamen)
+
+    writer.writeheader()
+    writer.writerow({'naam': 'Anna', 'leeftijd': 25, 'stad': 'Amsterdam'})
+    writer.writerow({'naam': 'Bram', 'leeftijd': 30, 'stad': 'Rotterdam'})
+\end{lstlisting}
+
+\section{Belangrijke parameters}
+\begin{itemize}
+  \item \texttt{delimiter} — scheidingsteken (standaard ,)
+  \item \texttt{quotechar} — teken om tekst te omgeven (standaard ")
+  \item \texttt{quoting} — manier waarop waarden tussen aanhalingstekens worden gezet
+\end{itemize}
+
+\section{Samenvatting}
+\begin{itemize}
+  \item \texttt{csv.reader()} — leest lijsten
+  \item \texttt{csv.DictReader()} — leest dictionaries
+  \item \texttt{csv.writer()} — schrijft lijsten
+  \item \texttt{csv.DictWriter()} — schrijft dictionaries
+\end{itemize}
+
+\end{document}
