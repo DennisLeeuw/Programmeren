@@ -1,3 +1,21 @@
-Tijdens het programmeren is het belangrijk om vast te leggen waarom je iets doet of gedaan hebt. Als je vaak 5 jaar later naar je eigen code kijkt is het al moeilijk om te begrijpen waarom je het zo hebt opgelost laat staan als iemand anders naar je code kijkt. Het is dus niet zinnig om uit te leggen wat de code doet, dat kan iedereen lezen, maar het is wel belangrijk om uit te leggen waarom je code doet wat het doet en wat het doel van de code is.
+Tijdens het programmeren is het belangrijk om vast te leggen waarom je iets doet of gedaan hebt. Als je 5 jaar later naar je eigen code kijkt is het soms al moeilijk om te begrijpen waarom je een bepaald probleem zo hebt opgelost laat staan als iemand anders naar je code kijkt. Het is dus niet zinnig om uit te leggen wat de code doet, dat kan iedereen lezen, maar het is wel belangrijk om uit te leggen waarom je code doet wat het doet en wat het doel van de code is.
+
+Om commentaar\index{commentaar} (comments\index{comments}) toe te voegen binnen je code gebruiken we het \# karakter. Commentaar wordt niet uitgevoerd door de interpreter. Alles vanaf het \# teken tot het einde van de regel wordt door de interpreter beschouwd als commentaar en daar wordt niets mee gedaan. We kunnen commentaar op een eigen regel zetten door de regel te beginnen met het \# of we kunnen commentaar na een opdracht zetten door na de code een \# te plaatsen met het commentaar.
+
 \begin{lstlisting}[language=python]
-# 
+# De opdracht was om in Python te zorgen
+# dat de uitkomst van 5+6 op het scherm te zien is.
+print(5+6) # Commentaar na een opdracht
+\end{lstlisting}
+
+Het is ook handig om aan het begin van je code aan te geven wat anderen met je code mogen doen, dus welk copyright en welke licentie we hebben. Ook kan je aangeven wat het programma doet en welke opties er bijvoorbeeld beschikbaar zijn.
+
+\begin{lstlisting}[language=python]
+# (C) 2025 Dennis Leeuw
+# Licentie: GPLv3
+
+# Dit programma zorgt ervoor dat ...
+\end{lstlisting}
+
+Vanaf nu maken we er een goede gewoonte van om onze code altijd te voorzien van commentaar. We geven voordat de code begint aan wat het totale programma doet en waar nodig beschrijven we de keuzes die we gemaakt hebben en waarom we voor een bepaalde oplossing gekozen hebben.
+
