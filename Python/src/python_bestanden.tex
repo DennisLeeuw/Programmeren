@@ -1,11 +1,60 @@
-Met Python kan je ook data van bestanden lezen en data naar bestanden schrijven dit onderdeel gaat over deze mogelijkheden. We gaan eenvoudige data lezen en schrijven van en naar een bestand.
+Met Python kan je data van bestanden lezen en data naar bestanden schrijven dit onderdeel gaat over deze mogelijkheden. We gaan eenvoudige data lezen en schrijven van en naar een bestand.
 
 Het werken met bestanden bestaat eruit dat we een bestand eerst moeten openen, daarna moeten we ervan lezen of naar schrijven, waarna we het bestand weer moeten sluiten. Om niet elke keer te hoeven aangeven om welk bestand het gaat gebruiken we een zogenaamde file handle. Je geeft in je script \'e\'en keer aan welk bestand je wilt openen en koppelt daaraan een file handle en daarna gebruik je alleen nog deze file handle om te lezen of te schrijven. Tot slot moet je die file handle sluiten.
 
 In Python ziet dat er ongeveer zo uit:
 \begin{lstlisting}[language=python]
-# File handle korten we af als fhdl
-fhdl = open("testbestand.txt")
-fhdl.write("Regel in bestand")
-fhdl.close()
+# File handle korten we af als fh
+fh = open('testbestand.txt')
+fh.close()
 \end{lstlisting}
+In dit voorbeeld is \texttt{fh} de file handle en die heeft functies zoals \texttt{write} (schrijven) naar en \texttt{close} (sluiten) van een bestand.
+
+Bij het uitvoeren van deze code zal je een error melding krijgen:
+\begin{lstlisting}[language=python]
+FileNotFoundError: [Errno 2] No such file or directory: 'testbestand.txt'
+\end{lstlisting}
+Deze foutmelding is een runtime error en kan afgevangen worden met een try en except.
+
+Python neemt standaard aan dat je een tekstbestand wilt openen om het te lezen (read). Je kan aan \texttt{open()} ook een 2de parameter meegeven, waarmee je zegt wat er gebeuren moet met een bestand:
+
+\begin{flushleft}
+\begin{table}[h!]
+\centering
+\begin{tabularx}{\textwidth}{ |c|c|X| }
+\hline
+	parameter &
+	functie &
+	werking \\
+\hline
+	r &
+	Read &
+	Opent een bestand om het te lezen, geeft een error als de file niet bestaat. Dit is de default. \\
+\hline
+	w &
+	Write &
+	Opent een bestand om het te schrijven, maakt het bestand aan als het niet bestaat en overschrijft eventueel bestaande inhoud \\
+\hline
+	a &
+	Append &
+	Opent een bestand om er data aan toe te voegen, maakt het bestand aan als het niet bestaat. \\
+\hline
+	x &
+	Create &
+	Maakt een nieuw, leeg, bestand aan, geeft een error als het bestand bestaat. \\
+\hline
+\end{tabularx}
+\caption{Logical operators}
+\label{table:logicop}
+\end{table}
+\end{flushleft}
+
+Naast deze functies kunnen we in dezelfde 2de parameter ook meegeven of het om een tekst (t) of een binair (b) bestand gaat. Binaire bestanden zijn bestanden zoals plaatjes of filmpjes. Tekst bestanden zijn bestanden zoals HTML-pagina's of configuratiebestanden. Met de parameter \texttt{rb} gaat Python ervanuit dat je een binair bestand wilt gaan lezen. En met \texttt{wt} dat je een tekstbestand wilt gaan schrijven.
+
+Tenslotte is er nog een 3de parameter die we meekunnen geven en dat is de encoding, hiermee kunnen we aangeven wat voor character encoding er gebruikt is in een bestand:
+\begin{lstlisting}[language=python]
+# File handle korten we af als fh
+fh = open('testbestand.txt', 'rt', encoding="utf-8")
+fh.close()
+\end{lstlisting}
+
