@@ -4,21 +4,13 @@ We gaan de \texttt{main.py} aanpassen zodat we de volgende functionaliteit krijg
 	\begin{itemize}
 	\item \url{http://127.0.0.1/windows?<opdracht>=<functie>}
 	\end{itemize}
-\item We gaan voor deze opdrachten werken met de uitkomsten van het PowerShell commando:
-\begin{lstlisting}[language=bash]
-Get-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion"
-\end{lstlisting}
-Via de REST-API vragen we de gegevens op.
+\item We gaan voor deze opdrachten werken met de uitkomsten van het PowerShell commando dat we geschreven hebben bij de PowerShell argumenten opdracht.
+\item Via de REST-API vragen we de gegevens op.
 	\begin{itemize}
 	\item \url{http://127.0.0.1/windows?version=CurrentBuild}
 	\item \url{http://127.0.0.1/windows?version=DisplayVersion}
 	\item \url{http://127.0.0.1/windows?version=ProductName}
 	\end{itemize}
-\end{enumerate}
-
-De opdrachten:
-\begin{enumerate}
-\item Schrijf een PowerShell script dat via een commandline optie de verschillende stukjes informatie produceert. Zoek zelf uit hoe je opties meegeeft aan een PowerShell script.
-\item Herschrijf daarna de Python \texttt{main.py} met de functies die de gevraagde informatie via REST in JSON produceert. Gebruik de subprocess module om het PowerShell script aan te roepen.
+\item Herschrijf de Python \texttt{main.py} met functies die de gevraagde informatie via REST in JSON produceert. Gebruik de subprocess module om het PowerShell script aan te roepen.
 \end{enumerate}
 
