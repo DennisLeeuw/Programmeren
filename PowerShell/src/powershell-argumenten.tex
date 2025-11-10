@@ -1,0 +1,38 @@
+Bij scripting is het handig als een gebruiker parameters aan een script kan meegeven om het script bepaalde acties te laten uitvoeren:
+\begin{lstlisting}[language=bash]
+.\mijnscript.ps1 -Naam "Jan" -Leeftijd 25
+\end{lstlisting}
+
+Via de \texttt{param} functie kunnen we afdwingen wat voor informatie er gegeven mag worden en in welke variabele de data geplaatst wordt:
+\begin{lstlisting}[language=bash]
+param (
+    [string]$Naam,
+    [int]$Leeftijd
+)
+
+Write-Host "Hallo $Naam, je bent $Leeftijd jaar oud."
+\end{lstlisting}
+
+We kunnen ook afdwingen dat er iets opgegeven moet worden (mandatory):
+\begin{lstlisting}[language=bash]
+param (
+    [Parameter(Mandatory=$true)]
+    [string]$Bestand
+)
+\end{lstlisting}
+
+Om te voorkomen dat we met lege variabelen komen te zitten, kunnen we ook een default waarde opgeven:
+\begin{lstlisting}[language=bash]
+param (
+    [string]$Naam = "Onbekend"
+)
+\end{lstlisting}
+
+Ook kunnen we een lijst opgeven van geldige waarden, als niet \'e\'en van de waarden geven wordt dan geeft PowerShell een error.
+\begin{lstlisting}[language=bash]
+param (
+    [ValidateSet("Start", "Stop", "Restart")]
+    [string]$Actie
+)
+\end{lstlisting}
+
