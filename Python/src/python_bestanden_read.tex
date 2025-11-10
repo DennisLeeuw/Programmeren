@@ -1,1 +1,10 @@
-Read
+Nu we een bestand geschreven hebben, gaan we kijken hoe we dit bestand weer kunnen inlezen.
+\lstinputlisting[language=python]{code/bestand_read.py}
+De variabele \texttt{data\_read} bevat het volledige document. Dit kan een probleem veroorzaken als het bestand groter is dan de maximaal beschikbare vrije geheugenruimte! We gaan later zien hoe we dit kunnen voorkomen.
+
+Het boven getoonde script toont een paar nieuwe zaken die we nog niet kennen van Python, dus we lopen het script eerst even door. Het script met het maken van een variabele die de bestandsnaam bevat. Door dit in een variabele te doen kunnen we het script later makkelijker wijzigen als we een ander bestand willen lezen.
+
+Via \textquote{try/except} openen we een bestand en met \texttt{read} lezen we alle data uit het bestand in het geheugen. Als dit allemaal goed verlopen is dan verlaten we de \textquote{try/except} constructie. Omdat \texttt{with} hebben gebruikt hoeven het bestand niet te sluiten, daar zorgt Python voor. Omdat Python het bestand voor ons sluit bestaat de file handle niet meer als we bij de \texttt{except} aankomen. De \texttt{except} checked dan ook direct op de error en niet op de fh.error.
+
+Tot slot printen we eerst wat \texttt{read\_data} eigenlijk is voor variabele en het blijkt een string te zijn. Daarna printen we de variabele met \texttt{print}. We gebruiken daarbij een speciale constructie. We vertellen print namelijk dat deze moet stoppen als er een lege regel voorbij komt. Dit is een echte lege regel, dus hij mag ook geen new line of return bevatten. Het is de zogenaamde NULL regel. Verwijder maar eens de \texttt{end=''} constructie en zie dat er dan een extra lege regel geprint wordt bij het printen van het bestand.
+
