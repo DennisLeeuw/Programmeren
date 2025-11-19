@@ -5,9 +5,9 @@ pip install "fastapi[standard]"
 \end{lstlisting}
 Voor meer informatie over FastAPI kan je terecht op \url{https://fastapi.tiangolo.com/}.
 
-\texttt{pip} plaatst FastAPI in een eigen directory. Deze directory is standaard niet toegevoegd aan je PATH en dus kan je \texttt{fastapi} alleen opstarten door het hele pad op te geven. Dat is niet handig dus gaan we het pad toevoegen aan onze PATH variabele in ons PowerShell profile:
+\texttt{pip} plaatst FastAPI in een eigen directory. Deze directory is standaard niet toegevoegd aan je PATH en dus kan je \texttt{fastapi} alleen opstarten door het hele pad op te geven. Dat is niet handig dus gaan we het pad toevoegen aan onze PATH variabele in ons PowerShell profile. Het pad naar je profile staat in de variabele \texttt{profile} dus die kunnen we gebruiken:
 \begin{lstlisting}[language=bash]
-notepad.exe .\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1 
+notepad.exe $profile
 \end{lstlisting}
 
 Voeg een regel toe met het pad dat je hebt gekregen van \texttt{pip} (jouw pad zal anders zijn dan in het gegeven voorbeeld)
