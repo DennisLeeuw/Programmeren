@@ -1,0 +1,24 @@
+Je werkt bij een bedrijf en je hebt zojuist de opdracht gekregen om de gebruikers die in een excel-sheet staan in te voeren in het systeem. Het gaat om een nieuw op te zetten bedrijfsonderdeel, dat zelfstandig moet kunnen draaien. Het hele bedrijf maakt gebruik van RBAC er worden dus nooit rechten uitgedeeld op persoonlijke titel.
+
+De te ondernemen stappen:
+\begin{enumerate}
+\item Maak een VM met active directory
+\item Exporteer de inhoud van het excel bestand naar een CSV-bestand
+\item Maak een nieuw PowerShell script
+\item Het script met een bestandsnaam als parameter accepteren
+\item Open het CSV bestand dat als parameter is meegeven
+\item Loop door de genoemde gebruikers
+\item Maak de groepen aan als deze nog niet bestaan
+\item Maak de gebruiker aan als deze nog niet bestaat
+\item Voeg de gebruiker aan de juiste groepen toe als dat nog niet het geval is
+\item Als de gebruiker nog geen wachtwoord heeft: genereer een wachtwoord en voeg dit toe aan de gebruiker
+	\begin{itemize}
+        \item Zorg dat de sysadmin dit wachtwoord ook krijgt
+	\end{itemize}
+\item Zorg dat de gebruiker bij de eerste inlog zijn wachtwoord moet wijzigen
+\item Geef melding(en) als iets niet goed is verlopen
+\item Sluit af met de mededeling welke gebruiker is aangemaakt en in welke groep(en) de gebruiker zit
+\end{enumerate}
+
+Gebruik het \url{Gebruikers.xlsx} bestand om de gebruikers aan te maken.
+
