@@ -9,4 +9,6 @@ De volgorde van de lessen is:
 - Python_Builtin.pdf
 - Python_Modules.pdf
 - Python_Debugging.pdf
+- Pyhton_Bestanden_Mappen.pdf
+- In ontwikkeling: Python_OOP.pdf
 
