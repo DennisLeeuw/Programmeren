@@ -1,0 +1,64 @@
+\documentclass[a4paper,12pt,twoside,openright,titlepage]{article}
+
+%Additional packages
+\input{styles/packages}
+
+% Listing style
+\input{styles/lstset}
+
+% Uncomment for production
+% \syntaxonly
+
+% Style
+\pagestyle{headings}
+
+% Define document
+\author{D. Leeuw}
+\title{Python Opdracht: Monitoring tool}
+\date{\today\\
+0.5.0\\
+\vfill
+\raggedright
+\copyright\ 2025-2026 Dennis Leeuw\\
+\input{styles/licentie-titlepage}}
+
+
+\begin{document}
+\selectlanguage{dutch}
+
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%
+%%% Introductie %%%
+%%%%%%%%%%%%%%%%%%%
+
+\section{Over dit Document}
+\subsection{Leerdoelen}
+\input{src/leerdoelen-opdr_monitoring}
+
+%%%%%%%%%%%%%%%%%
+%%% De inhoud %%%
+%%%%%%%%%%%%%%%%%
+
+\section{Casus}
+\subsection{De situatie}
+\input{src/monitoring-casus}
+\subsection{De vraag}
+\input{src/monitoring-vraag}
+
+\section{Opdrachten}
+\subsection{Flowdiagram}
+\input{src/monitoring-flowdiagram}
+\subsection{Monitoringtool}
+\input{src/monitoring-opdracht_script}
+\subsubsection{Aanwijzingen}
+\input{src/monitoring-aanwijzingen}
+
+%%%%%%%%%%%%%%%%%%%%%
+%%% Index and End %%%
+%%%%%%%%%%%%%%%%%%%%%
+%\backmatter
+\printindex
+\end{document}
+
+%%% Last line %%%
