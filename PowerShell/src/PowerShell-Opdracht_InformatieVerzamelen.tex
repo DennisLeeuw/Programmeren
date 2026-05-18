@@ -1,0 +1,54 @@
+\documentclass[a4paper,12pt,twoside,openright,titlepage]{article}
+
+%Additional packages
+\input{styles/packages}
+
+% Listing style
+\input{styles/lstset}
+
+% Uncomment for production
+% \syntaxonly
+
+% Style
+\pagestyle{headings}
+
+% Define document
+\author{D. Leeuw}
+\title{PowerShell: Opdracht Informatie Verzamelen}
+\date{\today\\
+0.5.0 \\
+\vfill
+\raggedright
+\copyright\ 2026 Dennis Leeuw\\
+\input{styles/licentie-titlepage}}
+
+
+\begin{document}
+\selectlanguage{dutch}
+
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%
+%%% Introductie %%%
+%%%%%%%%%%%%%%%%%%%
+
+\section{Over dit Document}
+\subsection{Leerdoelen}
+\subsection{Voorkennis}
+\input{src/voorkennis-opdracht-remoting}
+
+%%%%%%%%%%%%%%%%%
+%%% De inhoud %%%
+%%%%%%%%%%%%%%%%%
+
+\section{Informatie verzamelen}
+\input{src/powershell-opdracht_informatie}
+
+%%%%%%%%%%%%%%%%%%%%%
+%%% Index and End %%%
+%%%%%%%%%%%%%%%%%%%%%
+%\backmatter
+\printindex
+\end{document}
+
+%%% Last line %%%
