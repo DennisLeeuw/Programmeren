@@ -1,0 +1,55 @@
+\documentclass[a4paper,12pt,twoside,openright,titlepage]{article}
+
+%Additional packages
+\input{styles/packages}
+
+% Listing style
+\input{styles/lstset}
+
+% Uncomment for production
+% \syntaxonly
+
+% Style
+\pagestyle{headings}
+
+% Define document
+\author{D. Leeuw}
+\title{Python - Rekenmachine}
+\date{\today\\v.0.1.0}
+
+\begin{document}
+\selectlanguage{dutch}
+
+\maketitle
+
+\copyright\ 2025-2026 Dennis Leeuw\\
+
+\input{styles/licentie}
+
+%%%%%%%%%%%%%%%%%%%
+%%% Introductie %%%
+%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%
+%%% De inhoud %%%
+%%%%%%%%%%%%%%%%%
+
+% requires: 
+% provides: programmeren, python
+\section{Python als rekenmachine}
+\input{src/python_rekenen}
+\subsection{Opdrachten}
+\input{src/opdrachten-rekenen}
+\subsection{Verdieping modulo en floor division}
+\input{src/modulo}
+\subsubsection{Opdrachten}
+\input{src/opdrachten-modulo}
+
+%%%%%%%%%%%%%%%%%%%%%
+%%% Index and End %%%
+%%%%%%%%%%%%%%%%%%%%%
+%\backmatter
+\printindex
+\end{document}
+
+%%% Last line %%%
