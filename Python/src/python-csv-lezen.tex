@@ -1,0 +1,24 @@
+Er zijn twee verschillende functies die we uit de CSV-module kunnen gebruiken om een CSV-bestand te lezen. De eerste is \texttt{csv.reader()} en de tweede is \texttt{csv.DictReader()}. Beide functies zullen we bekijken.
+
+Met \texttt{csv.reader()} lees je een bestand regel voor regel en kan je regel voor regel gebruiken:
+\begin{lstlisting}[language=Python]
+import csv
+
+with open('personen.csv', newline='', encoding='utf-8') as csvfile:
+    reader = csv.reader(csvfile)
+    for line in reader:
+        print(line)
+\end{lstlisting}
+
+
+Met \texttt{csv.DictReader()} lees je een bestand als een dictionary in. Het verwacht dat de eerste regel van het CSV-bestand de namen van de kolommen bevat en geen echte data. Die namen worden gebruikt om per regel een dictionary te maken.
+
+\begin{lstlisting}[language=Python]
+import csv
+
+with open('personen.csv', newline='', encoding='utf-8') as csvfile:
+    reader = csv.DictReader(csvfile)
+    for line in reader:
+        print(line['naam'], line['stad'])
+\end{lstlisting}
+

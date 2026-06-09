@@ -1,0 +1,26 @@
+Ook voor het schrijven van een CSV-bestand hebben we 2 functies.
+
+Met \texttt{csv.writer()} schrijven we platte tekst weg als een CSV-bestand.
+\begin{lstlisting}[language=Python,frame=single]
+import csv
+
+with open('personen.csv', 'w', newline='', encoding='utf-8') as csvfile:
+    writer = csv.writer(csvfile)
+    writer.writerow(['naam', 'leeftijd', 'stad'])
+    writer.writerow(['Anna', 25, 'Amsterdam'])
+    writer.writerow(['Bram', 30, 'Rotterdam'])
+\end{lstlisting}
+
+Met \texttt{csv.DictWriter()} kunnen we een dictionary wegschrijven als CSV-bestand. Dit moet regel voor regel gebeuren en we moeten een header schrijven die de kolomnamen bevat.
+\begin{lstlisting}[language=Python,frame=single]
+import csv
+
+with open('personen.csv', 'w', newline='', encoding='utf-8') as csvfile:
+    kolomnamen = ['naam', 'leeftijd', 'stad']
+    writer = csv.DictWriter(csvfile, fieldnames=kolomnamen)
+
+    writer.writeheader()
+    writer.writerow({'naam': 'Anna', 'leeftijd': 25, 'stad': 'Amsterdam'})
+    writer.writerow({'naam': 'Bram', 'leeftijd': 30, 'stad': 'Rotterdam'})
+\end{lstlisting}
+

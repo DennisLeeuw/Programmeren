@@ -1,0 +1,107 @@
+\documentclass[a4paper,12pt,twoside,titlepage]{article}
+
+%Additional packages
+\input{styles/packages}
+
+% Listing style
+\input{styles/lstset}
+
+% Uncomment for production
+% \syntaxonly
+
+% Style
+\pagestyle{headings}
+
+% Define document
+\author{D. Leeuw}
+\title{Python: Data input}
+\date{\today\\
+0.0.0
+\vfill
+\raggedright
+\copyright\ 2026 Dennis Leeuw\\
+\input{styles/licentie-titlepage}}
+
+
+\begin{document}
+\selectlanguage{dutch}
+
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%
+%%% Introductie %%%
+%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%
+%%% De inhoud %%%
+%%%%%%%%%%%%%%%%%
+
+\section{Over dit document}
+\subsection{Leerdoelen}
+\input{src/python-data_input-leerdoelen}
+\subsection{Voorkennis}
+\input{src/python-data_input-voorkennis}
+
+\section{Introductie}
+\input{src/python-data_input-intro}
+
+\section{Data via user input}
+\input{src/python-input}
+
+\section{Data via argumenten}
+\input{src/python-argumenten}
+
+\section{Data via opties}
+\input{src/python-opties}
+
+\section{Data via bestanden}
+\subsection{Bestanden: File handles}
+\input{src/python_bestanden}
+\subsection{Schrijven naar een bestand}
+\input{src/python_bestanden_write}
+\subsection{Lezen van een bestand}
+\input{src/python_bestanden_read}
+\subsection{Lezen van regels uit een bestand}
+\input{src/python_bestanden_readline}
+\subsection{Bestanden verwijderen}
+\input{src/python_bestanden_remove}
+
+\subsection{Bestanden: Opdrachten}
+\subsubsection{Maken van een notitieblok}
+\input{src/opdracht-notities}
+
+\subsection{Bestanden en directories}
+\input{src/python_bestanden_path}
+\subsubsection{Analyseer de inhoud van een map}
+\input{src/opdracht-bestanden_mappen}
+
+\subsection{Werken met CSV bestanden}
+\input{src/python-csv-intro}
+\subsubsection{Lezen van CSV-bestanden}
+\input{src/python-csv-lezen}
+\subsubsection{Functie parameters}
+\input{src/python-csv-parameters}
+\subsubsection{Schrijven van CSV-bestanden}
+\input{src/python-csv-schrijven}
+
+
+\subsection{CSV bestanden: Opdracht}
+\input{src/python_bestanden_csv}
+
+
+\section{Pipe}
+\input{src/python-data_input-pipe}
+\subsection{JSON}
+\input{src/json}
+\subsubsection{Een JSON filter}
+\input{src/python-data_input-pipe_json}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%
+%%% Index and End %%%
+%%%%%%%%%%%%%%%%%%%%%
+\printindex
+\end{document}
+
+%%% Last line %%%

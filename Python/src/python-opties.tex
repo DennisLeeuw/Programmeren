@@ -1,0 +1,20 @@
+Het nadeel van argumenten is dat het ongestructureerde data is. De input kan van alles zijn. Om iets meer richting aan de data te geven kunnen we gebruik maken van opties.
+
+Een programma om via opties argumenten weer te geven:
+\lstinputlisting[language=Python]{code/opties.py}
+
+Door gebruik te maken van de \texttt{argparse} module krijgen we meteen al 1 gratis feature. Onze code kent meteen de \texttt{-h} en de \texttt{-{}-help} opties.
+
+\begin{lstlisting}[language=bash]
+python opties.py -h
+\end{lstlisting}
+
+De optie geeft de gezette \textbf{description} terug en ook welk opties het script ondersteunt. Bij \texttt{usage} wordt er duidelijk gemaakt welke opties gezet moeten zijn en welke er mogen zijn.
+
+We kunnen het script nu op opstarten met opties
+\begin{lstlisting}[language=bash]
+python opties.py -n 1 -s hello -o 3
+\end{lstlisting}
+
+We hebben gezien dat we door opties te gebruiken kunnen bepalen wat voor soort data we binnen krijgen en we kunnen bepalen wat meegegeven moet worden en wat niet. Hiermee hebben we al veel meer controle over de data die we kunnen gebruiken binnen een script.
+

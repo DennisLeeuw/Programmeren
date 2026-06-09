@@ -1,0 +1,34 @@
+JSON is een manier om data betekenis te geven. Het is onstaan op het web. Als we een webpagina hebben met informatie zoals:
+\begin{lstlisting}[language=html]
+<p>Jason Argonaut
+Jupiterlaan 1
+Heelverweg</p>
+\end{lstlisting}
+en we vragen die op, dan hebben we wel adres gegevens, maar we kunnen er niet zo veel mee.
+
+De eerste oplossing was om daar XML van te maken:
+\begin{lstlisting}[language=xml]
+<voornaam>Jason</voornaam> <achternaam>Argonaut</achternaam>
+<adres>Jupiterlaan 1</adres>
+<plaats>Heelverweg</plaats>
+\end{lstlisting}
+
+Het zorgt voor meer betekenis van de ontvangen data, maar het wordt er niet leesbaarder op.
+
+JSON heeft geprobeerd dit probleem op te lossen:
+\begin{lstlisting}
+{
+    "Voornaam": "Jason",
+    "Achternaam": "Argonaut",
+    "Adres": "Jupiterlaan 1",
+    "Plaats": "Heelverweg"
+}
+\end{lstlisting}
+
+
+staat voor JavaScript Object Notation
+
+Is voor gegevensuitwisseling
+Menselijk leesbaar
+Gemakkelijk te parsen door machines
+Veel gebruikt in webapplicaties en API’s

@@ -1,0 +1,15 @@
+Data kan ook aangeleverd worden als output van en ander commando. De data kan dan via het pipe-character (|) doorgestuurd worden naar ons script.
+
+Een Python script dat data van een pipe aanneemt en regel voor regel weergeeft op het scherm zou er zo uit kunnen zien:
+\lstinputlisting[language=Python]{code/pipe-json.py}
+Zoals je ziet hebben we voor de script de sys-module nodig.
+
+Een commando om dit script te testen op een Linux systeem zou er zo uit kunnen zien:
+\begin{lstlisting}[language=bash]
+echo "echo '{"Naam":"Jason","Leeftijd":42}' | python pipe-json.py
+\end{lstlisting}
+
+We kunnen de input combineren met het werken met opties, zodat je in een optie de key kan meegeven die je wilt zien:
+\lstinputlisting[language=Python]{code/pipe-json-arg.py}
+
+

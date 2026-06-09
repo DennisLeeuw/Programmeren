@@ -1,0 +1,16 @@
+Data kan ook aangeleverd worden als output van en ander commando. De data kan dan via het pipe-character (|) doorgestuurd worden naar ons script.
+
+Een Python script dat data van een pipe aanneemt en regel voor regel weergeeft op het scherm zou er zo uit kunnen zien:
+\lstinputlisting[language=Python]{code/pipe.py}
+Zoals je ziet hebben we voor de script de sys-module nodig.
+
+Een commando om dit script te testen op een Linux systeem zou er zo uit kunnen zien:
+\begin{lstlisting}[language=bash]
+echo -e "Mijn eerste regel\nEn een tweede regel" | python pipe.py
+\end{lstlisting}
+
+Op een Windows systeem met PowerShell wordt het:
+\begin{lstlisting}[language=bash]
+Write-Out ("Mijn eerste regel","En een tweede regel") | python.exe .\pipe.py
+\end{lstlisting}
+
