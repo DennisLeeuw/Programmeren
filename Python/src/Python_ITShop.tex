@@ -1,0 +1,53 @@
+\documentclass[a4paper,12pt,twoside,openright,titlepage]{article}
+
+%Additional packages
+\input{styles/packages}
+
+% Listing style
+\input{styles/lstset}
+
+% Uncomment for production
+% \syntaxonly
+
+% Style
+\pagestyle{headings}
+
+% Define document
+\author{D. Leeuw}
+\title{Python: ITShop}
+\date{\today\\
+0.5.0\\
+\vfill
+\raggedright
+\copyright\ 2025-2026 Dennis Leeuw\\
+\input{styles/licentie-titlepage}}
+
+
+\begin{document}
+\selectlanguage{dutch}
+
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%
+%%% Introductie %%%
+%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%
+%%% De inhoud %%%
+%%%%%%%%%%%%%%%%%
+
+\section{Situatie}
+\input{src/python-for-itshop_situatie}
+
+% For opdrachten
+\section{Opdracht}
+\input{src/python-for-itshop_opdracht}
+
+%%%%%%%%%%%%%%%%%%%%%
+%%% Index and End %%%
+%%%%%%%%%%%%%%%%%%%%%
+%\backmatter
+\printindex
+\end{document}
+
+%%% Last line %%%
