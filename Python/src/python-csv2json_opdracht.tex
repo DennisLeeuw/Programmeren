@@ -1,0 +1,31 @@
+Schrijf een Python-programma `logfilter.py`.
+
+Het programma moet het CSV-bestand lezen en alleen de regels selecteren waarbij status gelijk is aan FAIL.
+
+De geselecteerde regels moeten vervolgens worden opgeslagen in een bestand met de naam resultaat.json.
+
+De JSON moet bijvoorbeeld deze structuur hebben:
+
+\begin{lstlisting}[language=bash]
+[
+    {
+        "datum": "2026-09-15",
+        "tijd": "08:03",
+        "server": "SRV01",
+        "gebruikersnaam": "devries",
+        "type": "login",
+        "status": "FAIL",
+        "bericht": "Verkeerd wachtwoord"
+    },
+    {
+        "datum": "2026-09-15",
+        "tijd": "08:05",
+        "server": "SRV02",
+        "gebruikersnaam": "admin",
+        "type": "service",
+        "status": "FAIL",
+        "bericht": "Webserver gestopt"
+    }
+]
+\end{lstlisting}
+

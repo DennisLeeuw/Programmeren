@@ -1,0 +1,24 @@
+Je werkt als junior systeembeheerder. Een server houdt gebeurtenissen bij in een CSV-bestand. De servicedesk wil alleen bepaalde meldingen ontvangen.
+
+Je gaat daarom een Python-programma maken dat:
+\begin{enumerate}
+\item een CSV-bestand inleest;
+\item de regels controleert;
+\item alleen meldingen die aan een bepaalde voorwaarde voldoen selecteert;
+\item de geselecteerde gegevens omzet naar JSON;
+\item het resultaat opslaat in een JSON-bestand.
+\end{enumerate}
+
+Je hebt hiervoor een bestand nodig met log gegevens. Maak een bestand serverlog.csv:
+
+\begin{lstlisting}[language=bash]
+datum,tijd,server,gebruikersnaam,type,status,bericht
+2026-09-15,08:01,SRV01,jansen,login,OK,Succesvol ingelogd
+2026-09-15,08:03,SRV01,devries,login,FAIL,Verkeerd wachtwoord
+2026-09-15,08:05,SRV02,admin,service,FAIL,Webserver gestopt
+2026-09-15,08:07,SRV01,pietersen,login,OK,Succesvol ingelogd
+2026-09-15,08:09,SRV03,admin,disk,WARNING,Schijfruimte onder 20 procent
+2026-09-15,08:11,SRV02,admin,service,OK,Webserver gestart
+2026-09-15,08:13,SRV03,jansen,login,FAIL,Account geblokkeerd
+\end{lstlisting}
+
