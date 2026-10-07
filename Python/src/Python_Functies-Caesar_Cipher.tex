@@ -14,12 +14,12 @@
 
 % Define document
 \author{D. Leeuw}
-\title{Python Builtin Werkboek}
+\title{Python Caesar Cipher}
 \date{\today\\
 1.0.0 \\
 \vfill
 \raggedright
-\copyright\ 2025 Dennis Leeuw\\
+\copyright\ 2025-2026 Dennis Leeuw\\
 \input{styles/licentie-titlepage}}
 
 
@@ -46,17 +46,23 @@
 
 %B% \mainmatter
 
-\section{Decimaal naar binair}
-\input{src/opdracht-builtin-dec2bin}
+\section{Caesar Cipher}
+\input{src/caesar_cipher}
 
-\section{Decimaal naar hexadecimaal}
-\input{src/opdracht-builtin-dec2hex}
+\subsection{Opdracht}
+\input{src/opdracht-caesar_cipher}
 
-\section{Conversie in een loop}
-\input{src/opdracht-builtin-dec2binhex}
+\subsection{Tip: ASCII-tabel}
+\input{src/ascii-table-intro}
+\input{src/ascii-table}
+\input{src/ascii-char2int}
 
-\section{Converteren naar decimaal}
-\input{src/opdracht-builtin-binhex2dec}
+ \subsection{Andere vertaaltabellen}
+ \input{src/codetabellen}
+
+\subsection{Tip: Python conversie functies}
+\input{src/builtin-char2int}
+
 
 %%%%%%%%%%%%%%%%%%%%%
 %%% Index and End %%%
