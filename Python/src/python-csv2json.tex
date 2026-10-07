@@ -1,0 +1,167 @@
+Je werkt als junior systeembeheerder. Een server houdt gebeurtenissen bij in een CSV-bestand. De servicedesk wil alleen bepaalde meldingen ontvangen.
+
+Je gaat daarom een Python-programma maken dat:
+
+1. een CSV-bestand inleest;
+2. de regels controleert;
+3. alleen meldingen die aan een bepaalde voorwaarde voldoen selecteert;
+4. de geselecteerde gegevens omzet naar JSON;
+5. het resultaat opslaat in een JSON-bestand.
+
+### Inputbestand
+
+Maak een bestand `serverlog.csv`:
+
+```csv
+datum,tijd,server,gebruikersnaam,type,status,bericht
+2026-09-15,08:01,SRV01,jansen,login,OK,Succesvol ingelogd
+2026-09-15,08:03,SRV01,devries,login,FAIL,Verkeerd wachtwoord
+2026-09-15,08:05,SRV02,admin,service,FAIL,Webserver gestopt
+2026-09-15,08:07,SRV01,pietersen,login,OK,Succesvol ingelogd
+2026-09-15,08:09,SRV03,admin,disk,WARNING,Schijfruimte onder 20 procent
+2026-09-15,08:11,SRV02,admin,service,OK,Webserver gestart
+2026-09-15,08:13,SRV03,jansen,login,FAIL,Account geblokkeerd
+```
+
+### Opdracht
+
+Schrijf een Python-programma `logfilter.py`.
+
+Het programma moet het CSV-bestand lezen en **alleen de regels selecteren waarbij `status` gelijk is aan `FAIL`**.
+
+De geselecteerde regels moeten vervolgens worden opgeslagen in:
+
+```text
+resultaat.json
+```
+
+De JSON moet bijvoorbeeld deze structuur hebben:
+
+```json
+[
+    {
+        "datum": "2026-09-15",
+        "tijd": "08:03",
+        "server": "SRV01",
+        "gebruikersnaam": "devries",
+        "type": "login",
+        "status": "FAIL",
+        "bericht": "Verkeerd wachtwoord"
+    },
+    {
+        "datum": "2026-09-15",
+        "tijd": "08:05",
+        "server": "SRV02",
+        "gebruikersnaam": "admin",
+        "type": "service",
+        "status": "FAIL",
+        "bericht": "Webserver gestopt"
+    }
+]
+```
+
+### Eisen
+
+Het programma moet:
+
+* gebruikmaken van de Python-module `csv`;
+* gebruikmaken van de Python-module `json`;
+* het CSV-bestand met Python openen;
+* de inhoud van iedere regel controleren;
+* alleen `FAIL`-meldingen selecteren;
+* de geselecteerde gegevens bewaren in een Python-lijst;
+* de lijst omzetten naar JSON;
+* `resultaat.json` automatisch aanmaken;
+* JSON netjes leesbaar formatteren met bijvoorbeeld `indent=4`.
+
+### Uitbreiding 1 — filter instellen
+
+Maak het programma flexibeler.
+
+Laat de gebruiker kiezen waarop gefilterd wordt:
+
+```text
+Waarop wil je filteren?
+1. FAIL
+2. WARNING
+3. OK
+
+Maak een keuze:
+```
+
+Het programma gebruikt vervolgens de keuze als filter.
+
+### Uitbreiding 2 — filter op server
+
+Laat de gebruiker ook een server opgeven:
+
+```text
+Welke server wil je bekijken?
+SRV01
+```
+
+Het programma geeft dan alleen meldingen van die server terug.
+
+Bijvoorbeeld:
+
+```text
+Server: SRV01
+Status: FAIL
+```
+
+### Uitbreiding 3 — combinatie van filters
+
+Laat de gebruiker zowel een server als status invoeren:
+
+```text
+Server: SRV01
+Status: FAIL
+```
+
+Alleen regels die aan **beide voorwaarden** voldoen worden naar JSON geschreven.
+
+### Uitbreiding 4 — statistiek
+
+Laat het programma vóór het maken van het JSON-bestand melden:
+
+```text
+Aantal regels gelezen: 7
+Aantal regels geselecteerd: 3
+Resultaat opgeslagen in resultaat.json
+```
+
+## Denkvragen voor de student
+
+Beantwoord na afloop:
+
+1. Wat is het verschil tussen CSV en JSON?
+2. Waarom is een CSV-bestand handig als invoerbestand?
+3. Waarom gebruiken we een Python `list` voor de gefilterde gegevens?
+4. Wat doet `csv.DictReader()`?
+5. Wat doet `json.dump()`?
+6. Wat is het voordeel van `indent=4`?
+7. Wat gebeurt er als het CSV-bestand niet bestaat?
+8. Hoe zou je het programma aanpassen zodat alleen `WARNING`-meldingen worden weergegeven?
+
+## Eindopdracht
+
+Maak uiteindelijk een programma waarbij de gebruiker zelf kan aangeven:
+
+```text
+=== Server Log Filter ===
+
+CSV-bestand: serverlog.csv
+
+Server (bijvoorbeeld SRV01 of ALL): SRV01
+Status (OK, WARNING, FAIL of ALL): FAIL
+
+Aantal regels gelezen: 7
+Aantal regels gevonden: 1
+
+JSON-bestand: resultaat.json
+```
+
+De docent kan vervolgens controleren of `resultaat.json` uitsluitend de juiste records bevat.
+
+**Extra leerzaam voor MBO 4:** laat studenten eerst zelf een oplossing maken zonder voorbeeldcode. Daarna kunnen ze `DictReader`, `json.dump()` en foutafhandeling toevoegen. Zo blijft de opdracht vooral gericht op **probleemoplossend programmeren**, in plaats van alleen code overtypen.
+
