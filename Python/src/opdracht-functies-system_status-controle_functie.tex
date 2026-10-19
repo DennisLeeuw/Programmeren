@@ -1,0 +1,22 @@
+Maak een aparte functie waarmee je een waarde kunt controleren.
+
+Bijvoorbeeld:
+\begin{lstlisting}[language=Python]
+def bepaal_status(waarde, waarschuwing, kritiek):
+\end{lstlisting}
+
+De functie moet:
+\begin{description}
+\item[OK] teruggeven wanneer de waarde onder de waarschuwingsgrens ligt;
+\item[Waarschuwing] teruggeven wanneer de waarde tussen de grenzen ligt;
+\item[Kritiek] teruggeven wanneer de kritieke grens wordt overschreden.
+\end{description}
+
+Voorbeeld:
+\begin{lstlisting}[language=Python]
+status = bepaal_status(82, 70, 90)
+print(status)
+\end{lstlisting}
+
+De \texttt{return} waarden zijn OK, Waarschuwing en Kritiek.
+
