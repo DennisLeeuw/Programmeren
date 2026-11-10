@@ -1,0 +1,68 @@
+\documentclass[a4paper,12pt,twoside,openright,titlepage]{article}
+
+%Additional packages
+\input{styles/packages}
+
+% Listing style
+\input{styles/lstset}
+
+% Uncomment for production
+% \syntaxonly
+
+% Style
+\pagestyle{headings}
+
+% Define document
+\author{D. Leeuw}
+\title{PowerShell: Opdracht werken met variabelen}
+\date{\today\\
+0.0.0 \\
+\vfill
+\raggedright
+\copyright\ 2026 Dennis Leeuw\\
+\input{styles/licentie-titlepage}}
+
+
+\begin{document}
+\selectlanguage{dutch}
+
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%
+%%% Introductie %%%
+%%%%%%%%%%%%%%%%%%%
+
+\section{Over dit Document}
+\subsection{Leerdoelen}
+\subsection{Voorkennis}
+
+%%%%%%%%%%%%%%%%%
+%%% De inhoud %%%
+%%%%%%%%%%%%%%%%%
+
+\section{De situatie}
+\input{src/powershell-opdracht-datatypes_situatie}
+
+\section{Kennismaken met variabelen}
+\input{src/powershell-opdracht-datatypes_variabelen}
+
+\section{Gebruikers invoer}
+\input{src/powershell-opdracht-datatypes_userinput}
+
+\section{Rekenen met variabelen}
+\input{src/powershell-opdracht-datatypes_rekenen}
+
+\section{Maak een Systemoverzicht}
+\input{src/powershell-opdracht-datatypes_overzicht}
+
+\section{Extra informatie}
+\input{src/powershell-opdracht-datatypes_extra}
+
+%%%%%%%%%%%%%%%%%%%%%
+%%% Index and End %%%
+%%%%%%%%%%%%%%%%%%%%%
+%\backmatter
+\printindex
+\end{document}
+
+%%% Last line %%%
