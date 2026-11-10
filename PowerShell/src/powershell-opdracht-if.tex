@@ -1,0 +1,36 @@
+
+Als junior systeembeheerder krijg je vaak de taak om handmatige handelingen te automatiseren. Condities (\textquote{if}, \textquote{elseif}, \textquote{else}) zijn hierin onmisbaar, omdat je script beslissingen moet kunnen nemen op basis van data of invoer.
+
+Jou opdracht is om een PowerShell-script te schrijven dat de status van een lokale of virtuele server controleert en op basis daarvan actie onderneemt. Het te maken script krijgt de naam \textquote{Check-ServerHealth.ps1}.
+
+De eisen waaraan het moet voldoen zijn:
+\begin{enumerate}
+\item Vrije schijfruimte controleren
+	\begin{itemize}
+	\item Vraag de gebruiker via `Read-Host` om het percentage vrije schijfruimte op te geven (een getal tussen 0 en 100).
+	\item Schrijf een `if`-statement:
+	\item Als het percentage kleiner is dan 10, verschijnt er een kritieke waarschuwing in het rood.
+	\item Als het percentage kleiner is dan 25, verschijnt er een gele waarschuwing.
+	\item Anders is de schijfruimte in orde en verschijnt er een groene melding.
+	\end{itemize}
+\item Uitvoeren op disks
+	\begin{itemize}
+	\item Herschrijf het script en vraag de gebruiker om de naam van een disk (C of D)
+	\item Controleer of de variabele niet leeg is (null-check) voordat je ermee gaat werken
+	\item Haal de vrije schijfruimte op van de disk (Get-Volume -DriveLetter <driveletter>)
+	\item Gebruik dezelfde test(s) als in de vorige opdracht
+	\end{itemize}
+\item Service-status controleren met logische operators
+	\begin{itemize}
+	\item Maak twee variabelen aan in je script, bijvoorbeeld:
+	\item Vraag aan de gebruiker om een service naam
+	\item Vraag aan de gebruiker of er een maintenance window is. De enige geldige antwoorden zijn J of N.
+	\item Controlleer of de service draait
+	\item Schrijf een if conditie waarin je controleert of een service draait \textbf{en} of er een onderhoudsvenster actief is:
+		\begin{itemize}
+		\item Als de service niet draait \textbf{en} er is geen onderhoudsvenster, bericht dit dan aan de gebruiker
+		\item Gebruik in alle andere gevallen een melding dat er geen actie vereist is.
+		\end{itemize}
+	\end{itemize}
+\end{enumerate}
+
