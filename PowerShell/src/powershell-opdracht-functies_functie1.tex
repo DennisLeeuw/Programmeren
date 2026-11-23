@@ -1,0 +1,27 @@
+Maak een PowerShell-script met de naam:
+\begin{lstlisting}[language=bash]
+SystemInspector.ps1
+\end{lstlisting}
+
+De eerste functie die je gaat maken is:
+\begin{lstlisting}[language=bash]
+Get-ComputerInformation
+\end{lstlisting}
+
+De functie moet de volgende gegevens opleveren:
+\begin{itemize}
+\item Computernaam
+\item Windows-versie
+\item Windows-editie
+\item Architectuur (32- of 64-bits)
+\item Naam van de ingelogde gebruiker
+\end{itemize}
+
+Eisen:
+\begin{itemize}
+\item Gebruik minimaal \'e\'en parameter.
+\item De parameter ComputerName moet een string zijn.
+\item Als geen computernaam wordt opgegeven, moet de lokale computer worden gebruikt.
+%% - Geef de resultaten terug als een PSCustomObject.
+\end{itemize}
+
