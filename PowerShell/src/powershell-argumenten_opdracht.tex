@@ -5,6 +5,10 @@
 Get-ItemProperty \
     -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion"
 \end{lstlisting}
-\item Schrijf een PowerShell script dat via parameters de verschillende stukjes informatie produceert. We willen CurrentBuild, DisplayVersion, ProductName als losse data aan het script kunnen vragen.
+ Schrijf een PowerShell script dat via parameters de verschillende stukjes informatie produceert. We willen CurrentBuild, DisplayVersion, ProductName als losse data aan het script kunnen vragen. Ook willen we een optie die in 1x alle drie de stukken informatie terug geeft.
+\item In deze tweede opdracht gaan we controlleren of gebruikers invoer correct is. Maak een script waarin de gebruiker als parameter moet opgeven wat de hostname van zijn machine is. Zorg ervoor dat de gebruiker alleen een string mag opgeven en dat de ingevoerde waar niet leeg is. Controlleer de opgegeven waarde met die uit 
+\begin{lstlisting}[language=bash]
+$env:ComputerName.
+\end{lstlisting}
 \end{enumerate}
 
