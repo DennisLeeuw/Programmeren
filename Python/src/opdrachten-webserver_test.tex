@@ -4,7 +4,9 @@ Een webhosting bedrijf wil van zijn servers kunnen nagaan of alles nog correct w
 	\item Controle of de webserver draait
 	\item Controle of de domeinen op de webserver beschikbaar zijn
 \end{enumerate}
-We mogen niets op de webserver installeren, dus we zullen dat vanaf afstand moeten doen.
+We mogen niets op de webserver installeren, we zullen de tests dus vanaf afstand (over het netwerk) moeten doen.
+
+Bekijk eerst hoe het HTTP protocol werkt op: \url{https://protocol-explorer-alpha.vercel.app/}
 
 De testen die we gaan doen moeten oplopen van algemeen naar specifiek:
 \begin{enumerate}
@@ -28,20 +30,12 @@ In het programma:
 	\item moet er een for of while loop gebruikt worden voor het testen van de web-poorten
 \end{itemize}
 
-Opdracht 1
+Stappen plan:
 \begin{enumerate}
 	\item Maak een flow-diagram van het te maken programmma
-\end{enumerate}
-
-Opdracht 2
-\begin{enumerate}
-	\item Schrijf een programma dat deze functies uitvoert
+	\item Schrijf een programma dat gewenste functies uitvoert
 	\item Test het programma tegen een werkende webserver
-\end{enumerate}
-
-Opdracht 3
-\begin{enumerate}
-	\item Maak een versie waarin een gebruiker van het programma zelf mag opgeven op welk IP-adres, en domein er getest moet worden
-	\item Het script per server uitzoekt of het port 443 of port 80 moet gebruiken
+	\item Maak een versie waarin een gebruiker aan het programma mag opgeven op welk IP-adres, en domein er getest moet worden
+	\item Zorg dat het script per server uitzoekt of het port 443 of port 80 moet gebruiken
 \end{enumerate}
 
